@@ -1,0 +1,95 @@
+Index: src/main/java/lesson2/threads/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package lesson2.threads;\r\n\r\nimport java.util.concurrent.ExecutorService;\r\nimport java.util.concurrent.Executors;\r\n\r\npublic class Main {\r\n\r\n    // Почему при вызове executorService.shutdown(); программа продолжает свое исполнение ?\r\n    // Почему если убрать строчку 28 (executorService.shutdown()) программа не прекратит свое исполнение\r\n    // даже после завершения всех тасок в executorService ?\r\n    // Почему при работе тасок executorService в консоль в секунду попадает всего 4 сообщения, тогда как тасок в executorService - 16?\r\n    public static void main(String[] args) {\r\n        startSomeDaemon();\r\n\r\n        int num = getThreadsCount();\r\n\r\n        ExecutorService executorService = Executors.newFixedThreadPool(4);\r\n        for (int i = 0; i < num; i++) {\r\n            int captureId = i;\r\n            executorService.submit(() -> {\r\n                try {\r\n                    Thread.sleep(1000);\r\n                } catch (InterruptedException e) {\r\n                    e.printStackTrace();\r\n                    return;\r\n                }\r\n                System.err.println(String.format(\"Hello from %d callable\", captureId));\r\n            });\r\n        }\r\n        executorService.shutdown();\r\n    }\r\n\r\n    private static int getThreadsCount() {\r\n        return 16;\r\n//        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {\r\n//            int num = Integer.valueOf(reader.readLine());\r\n//            return num;\r\n//        } catch (IOException e) {\r\n//            e.printStackTrace();\r\n//        }\r\n//\r\n//        return 0;\r\n    }\r\n\r\n    private static void startSomeDaemon() {\r\n        Thread thread = new Thread(() -> {\r\n            int t = 0;\r\n            while (true) {\r\n                System.err.println(t++);\r\n                try {\r\n                    Thread.sleep(1000);\r\n                } catch (InterruptedException e) {\r\n                    e.printStackTrace();\r\n                }\r\n            }\r\n        });\r\n        thread.setDaemon(true);\r\n        thread.start();\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/lesson2/threads/Main.java b/src/main/java/lesson2/threads/Main.java
+--- a/src/main/java/lesson2/threads/Main.java	(revision 626f1986828addc322a27e1de9ca0f8247bb41d1)
++++ b/src/main/java/lesson2/threads/Main.java	(date 1632081434897)
+@@ -11,9 +11,7 @@
+     // Почему при работе тасок executorService в консоль в секунду попадает всего 4 сообщения, тогда как тасок в executorService - 16?
+     public static void main(String[] args) {
+         startSomeDaemon();
+-
+         int num = getThreadsCount();
+-
+         ExecutorService executorService = Executors.newFixedThreadPool(4);
+         for (int i = 0; i < num; i++) {
+             int captureId = i;
+@@ -46,7 +44,7 @@
+         Thread thread = new Thread(() -> {
+             int t = 0;
+             while (true) {
+-                System.err.println(t++);
++                System.err.println("Daemon count = " + t++);
+                 try {
+                     Thread.sleep(1000);
+                 } catch (InterruptedException e) {
+@@ -57,4 +55,9 @@
+         thread.setDaemon(true);
+         thread.start();
+     }
++
++    /*Ответы на вопросы
++
++
++    */
+ }
+Index: build/tmp/compileJava/source-classes-mapping.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>lesson2/threads/Main.java\r\n lesson2.threads.Main\r\nlesson2/Calendar/Main.java\r\n lesson2.Calendar.Main\r\nlesson2/threads/Counter.java\r\n lesson2.threads.Counter\r\nlesson2/locks/DeadLock.java\r\n lesson2.locks.DeadLock\r\nlesson2/threads/Completable.java\r\n lesson2.threads.Completable\r\nlesson2/locks/LiveLock.java\r\n lesson2.locks.LiveLock\r\nlesson2/Calendar/DayOfWeek.java\r\n lesson2.Calendar.DayOfWeek\r\nlesson2/TreeDirectory.java\r\n lesson2.TreeDirectory\r\nlesson3/factory/PhoneNotificationFactory.java\r\n lesson3.factory.PhoneNotificationFactory\r\nlesson3/User.java\r\n lesson3.User\r\nlesson3/PhoneNotification.java\r\n lesson3.PhoneNotification\r\nlesson3/MailNotification.java\r\n lesson3.MailNotification\r\nlesson3/decorator/NotificationDecoratorDE.java\r\n lesson3.decorator.NotificationDecoratorDE\r\nlesson3/decorator/NotificationDecoratorEN.java\r\n lesson3.decorator.NotificationDecoratorEN\r\nlesson3/decorator/NotificationDecoratorRU.java\r\n lesson3.decorator.NotificationDecoratorRU\r\nlesson3/decorator/NotificationDecorator.java\r\n lesson3.decorator.NotificationDecorator\r\nlesson3/factory/NotificationFactory.java\r\n lesson3.factory.NotificationFactory\r\nlesson3/factory/MailNotificationFactory.java\r\n lesson3.factory.MailNotificationFactory\r\nlesson3/Notification.java\r\n lesson3.Notification\r\nlesson3/resourse/Source.java\r\n lesson3.resourse.Source\r\n lesson3.resourse.Source$1\r\nlesson3/resourse/UserLanguage.java\r\n lesson3.resourse.UserLanguage\r\nlesson3/Main.java\r\n lesson3.Main\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/build/tmp/compileJava/source-classes-mapping.txt b/build/tmp/compileJava/source-classes-mapping.txt
+--- a/build/tmp/compileJava/source-classes-mapping.txt	(revision 626f1986828addc322a27e1de9ca0f8247bb41d1)
++++ b/build/tmp/compileJava/source-classes-mapping.txt	(date 1632151350754)
+@@ -1,45 +1,0 @@
+-lesson2/threads/Main.java
+- lesson2.threads.Main
+-lesson2/Calendar/Main.java
+- lesson2.Calendar.Main
+-lesson2/threads/Counter.java
+- lesson2.threads.Counter
+-lesson2/locks/DeadLock.java
+- lesson2.locks.DeadLock
+-lesson2/threads/Completable.java
+- lesson2.threads.Completable
+-lesson2/locks/LiveLock.java
+- lesson2.locks.LiveLock
+-lesson2/Calendar/DayOfWeek.java
+- lesson2.Calendar.DayOfWeek
+-lesson2/TreeDirectory.java
+- lesson2.TreeDirectory
+-lesson3/factory/PhoneNotificationFactory.java
+- lesson3.factory.PhoneNotificationFactory
+-lesson3/User.java
+- lesson3.User
+-lesson3/PhoneNotification.java
+- lesson3.PhoneNotification
+-lesson3/MailNotification.java
+- lesson3.MailNotification
+-lesson3/decorator/NotificationDecoratorDE.java
+- lesson3.decorator.NotificationDecoratorDE
+-lesson3/decorator/NotificationDecoratorEN.java
+- lesson3.decorator.NotificationDecoratorEN
+-lesson3/decorator/NotificationDecoratorRU.java
+- lesson3.decorator.NotificationDecoratorRU
+-lesson3/decorator/NotificationDecorator.java
+- lesson3.decorator.NotificationDecorator
+-lesson3/factory/NotificationFactory.java
+- lesson3.factory.NotificationFactory
+-lesson3/factory/MailNotificationFactory.java
+- lesson3.factory.MailNotificationFactory
+-lesson3/Notification.java
+- lesson3.Notification
+-lesson3/resourse/Source.java
+- lesson3.resourse.Source
+- lesson3.resourse.Source$1
+-lesson3/resourse/UserLanguage.java
+- lesson3.resourse.UserLanguage
+-lesson3/Main.java
+- lesson3.Main

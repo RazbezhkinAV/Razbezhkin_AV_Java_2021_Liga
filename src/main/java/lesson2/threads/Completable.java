@@ -5,6 +5,7 @@ import java.util.function.Function;
 
 public class Completable {
     // Почему в выводе нет "Hello world"?
+    // из-за livelock
     public static void main(String[] args) {
         CompletableFuture.supplyAsync(() -> {
             try {
@@ -24,7 +25,8 @@ public class Completable {
             }
             return first + "world";
         }))
-        .thenApply(Function.identity())
-        .thenAccept(System.out::println);
+                .thenApply(Function.identity())
+                .thenAccept(System.out::println)
+                .join();
     }
 }

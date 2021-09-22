@@ -9,6 +9,14 @@ public class Main {
     // Почему если убрать строчку 28 (executorService.shutdown()) программа не прекратит свое исполнение
     // даже после завершения всех тасок в executorService ?
     // Почему при работе тасок executorService в консоль в секунду попадает всего 4 сообщения, тогда как тасок в executorService - 16?
+    /*
+    * 1.Потоки вызваные с помощью executorService работают параллельно с другими потоками.У нас имеется основной поток (main), поток демон и потоки созданные executorService.
+    *
+    * 2.Т.к. executorService это  обёртка на потоки, то после выполнения всех тасок потоки не остановятся,а так же у нас имеется поток демон который продолжает свою работу пока живы потоки не демоны.
+    * получается мы емеем 4 потока которые завершили таски и ожидают новые, и поток демон который будет работать пока живы другие потоки.
+    *
+    * 3.В параметрах при создании executorService указано только 4 потока,следоватьльно у нас только 4 потока которые обрабатывают с полученные тасками.
+    * */
     public static void main(String[] args) {
         startSomeDaemon();
 
@@ -26,8 +34,8 @@ public class Main {
                 }
                 System.err.println(String.format("Hello from %d callable", captureId));
             });
-        }
-        executorService.shutdown();
+        };
+        //executorService.shutdown();
     }
 
     private static int getThreadsCount() {
