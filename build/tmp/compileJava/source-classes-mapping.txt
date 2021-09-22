@@ -51,3 +51,27 @@ lesson2/threads/Main.java
  lesson2.threads.Main
 lesson2/Calendar/Main.java
  lesson2.Calendar.Main
+lesson5/Shop.java
+ lesson5.Shop
+lesson5/product/Manufacturer.java
+ lesson5.product.Manufacturer
+lesson5/product/NameProduct.java
+ lesson5.product.NameProduct
+lesson5/person/Person.java
+ lesson5.person.Person
+lesson5/product/Watch.java
+ lesson5.product.Watch
+lesson5/product/Phone.java
+ lesson5.product.Phone
+lesson5/catalog/Catalog.java
+ lesson5.catalog.Catalog
+lesson5/product/Product.java
+ lesson5.product.Product
+lesson5/product/Tablet.java
+ lesson5.product.Tablet
+lesson5/Basket.java
+ lesson5.Basket
+lesson5/person/Customer.java
+ lesson5.person.Customer
+lesson5/Main.java
+ lesson5.Main
