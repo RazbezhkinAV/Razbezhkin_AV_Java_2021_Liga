@@ -4,13 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="90844150-3ef2-43a8-8096-f058959a21d0" name="Default Changelist" comment="Added solution lesson5">
-      <change afterPath="$PROJECT_DIR$/src/main/java/lesson4/Model/Qube.java" afterDir="false" />
+    <list default="true" id="90844150-3ef2-43a8-8096-f058959a21d0" name="Default Changelist" comment="Added solution lesson4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson4/BadCode2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson4/BadCode2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson4/Qube.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson4/Shape3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson4/Model/Shape3D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson4/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson4/Model/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson4/Model/Qube.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson4/Model/Qube.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson4/Model/Shape2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson4/Model/Shape2D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson4/Model/Shape3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson4/Model/Shape3D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson4/Model/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson4/Model/Square.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +68,7 @@
       <recent name="D:\Liga\homework" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="Application.BadCode2">
     <configuration name="BadCode2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lesson4.BadCode2" />
       <module name="homework.liga.main" />
@@ -222,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632317847493</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added solution lesson4">
+      <created>1632384353362</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1632384353362</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -256,6 +263,7 @@
     <MESSAGE value="update gitignore" />
     <MESSAGE value="Added solution lesson2" />
     <MESSAGE value="Added solution lesson5" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added solution lesson5" />
+    <MESSAGE value="Added solution lesson4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added solution lesson4" />
   </component>
 </project>

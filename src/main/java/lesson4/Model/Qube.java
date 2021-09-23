@@ -11,6 +11,7 @@ public class Qube extends Shape implements Shape3D {
         this.y = y;
         this.z = z;
     }
+
     public Double getX() {
         return x;
     }

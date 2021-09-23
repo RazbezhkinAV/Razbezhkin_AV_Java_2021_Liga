@@ -13,11 +13,12 @@ public class Square extends Shape implements Shape2D {
     public Double getX() {
         return x;
     }
+
     public Double getY() {
         return y;
     }
 
     public Double getPerimeter() {
-        return Math.pow(super.getEdgeSize(),2);
+        return Math.pow(super.getEdgeSize(), 2);
     }
 }
