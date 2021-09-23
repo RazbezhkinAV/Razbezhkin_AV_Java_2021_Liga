@@ -4,13 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="90844150-3ef2-43a8-8096-f058959a21d0" name="Default Changelist" comment="Added solution lesson4">
+    <list default="true" id="90844150-3ef2-43a8-8096-f058959a21d0" name="Default Changelist" comment="Update solution lesson4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/lesson3/MailNotification.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/lesson3/MailNotification.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/lesson3/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/lesson3/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/lesson3/Notification.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/lesson3/Notification.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/lesson3/PhoneNotification.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/lesson3/PhoneNotification.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/lesson3/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/lesson3/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/lesson3/decorator/NotificationDecoratorDE.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/lesson3/decorator/NotificationDecoratorEN.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/lesson3/decorator/NotificationDecoratorRU.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/lesson3/resourse/Source$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/lesson3/resourse/Source.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson4/Model/Qube.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson4/Model/Qube.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson4/Model/Shape2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson4/Model/Shape2D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson4/Model/Shape3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson4/Model/Shape3D.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson4/Model/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson4/Model/Square.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson3/MailNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson3/MailNotification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson3/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson3/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson3/Notification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson3/PhoneNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson3/PhoneNotification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson3/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson3/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson3/decorator/NotificationDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson3/decorator/NotificationDecorator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson3/decorator/NotificationDecoratorDE.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson3/decorator/NotificationDecoratorEN.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson3/decorator/NotificationDecoratorRU.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson3/factory/MailNotificationFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson3/factory/MailNotificationFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson3/resource/Source.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson3/resource/Source.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson3/resource/UserLanguage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson3/resource/UserLanguage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,9 +43,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Class" />
         <option value="Interface" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -68,20 +86,7 @@
       <recent name="D:\Liga\homework" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BadCode2">
-    <configuration name="BadCode2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lesson4.BadCode2" />
-      <module name="homework.liga.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="lesson4.Model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Main (2)">
     <configuration name="Completable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lesson2.threads.Completable" />
       <module name="homework.liga.main" />
@@ -121,6 +126,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lesson3.Main" />
+      <module name="homework.liga.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lesson3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lesson2.Calendar.Main" />
       <module name="homework.liga.main" />
@@ -149,11 +167,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Counter" />
         <item itemvalue="Application.Completable" />
-        <item itemvalue="Application.BadCode2" />
       </list>
     </recent_temporary>
   </component>
@@ -229,7 +247,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632384353362</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Update solution lesson4">
+      <created>1632384925716</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1632384925716</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -264,6 +289,7 @@
     <MESSAGE value="Added solution lesson2" />
     <MESSAGE value="Added solution lesson5" />
     <MESSAGE value="Added solution lesson4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added solution lesson4" />
+    <MESSAGE value="Update solution lesson4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update solution lesson4" />
   </component>
 </project>

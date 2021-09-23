@@ -1,5 +1,7 @@
 package lesson3;
 
+import lesson3.decorator.NotificationDecorator;
+import lesson3.resource.NotificationType;
 import lesson3.resource.UserLanguage;
 
 public class PhoneNotification implements Notification {
@@ -11,18 +13,12 @@ public class PhoneNotification implements Notification {
     }
 
     @Override
-    public String getWelcomeText() {
-        return "...phone...";
+    public UserLanguage userLanguage() {
+        return user.getLanguage();
     }
 
     @Override
-    public String getByText() {
-        return "...phone...";
+    public String sendNotification(NotificationType notificationType) {
+        return user.getLanguage().name() + ": " + new NotificationDecorator(this).sendNotification(notificationType);
     }
-
-    @Override
-    public UserLanguage userCountry() {
-        return user.getCounty();
-    }
-
 }

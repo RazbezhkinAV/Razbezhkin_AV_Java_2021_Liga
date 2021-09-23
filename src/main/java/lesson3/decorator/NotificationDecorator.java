@@ -1,8 +1,11 @@
 package lesson3.decorator;
 
 import lesson3.Notification;
+import lesson3.resource.NotificationType;
+import lesson3.resource.Source;
+import lesson3.resource.UserLanguage;
 
-abstract class NotificationDecorator implements Notification {
+public class NotificationDecorator implements Notification {
     Notification notification;
 
     public NotificationDecorator(Notification notification) {
@@ -10,14 +13,13 @@ abstract class NotificationDecorator implements Notification {
     }
 
     @Override
-
-    public String getWelcomeText() {
-        return notification.getWelcomeText() + "\n" + "-----------";
+    public UserLanguage userLanguage() {
+        return notification.userLanguage();
     }
 
-    public String getByText() {
-        return notification.getByText() + "\n" + "-----------";
+    @Override
+    public String sendNotification(NotificationType notificationType) {
+        return Source.getNotification(userLanguage()).get(notificationType);
     }
-
 
 }

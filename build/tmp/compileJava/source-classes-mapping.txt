@@ -1,81 +1,76 @@
-lesson3/resource/Source.java
- lesson3.resource.Source
- lesson3.resource.Source$1
-lesson3/factory/PhoneNotificationFactory.java
- lesson3.factory.PhoneNotificationFactory
+lesson5/product/Tablet.java
+ lesson5.product.Tablet
+lesson5/product/Product.java
+ lesson5.product.Product
 lesson2/locks/LiveLock.java
  lesson2.locks.LiveLock
-lesson3/MailNotification.java
- lesson3.MailNotification
+lesson5/person/Customer.java
+ lesson5.person.Customer
 lesson5/product/Manufacturer.java
  lesson5.product.Manufacturer
-lesson3/decorator/NotificationDecoratorDE.java
- lesson3.decorator.NotificationDecoratorDE
-lesson3/decorator/NotificationDecoratorEN.java
- lesson3.decorator.NotificationDecoratorEN
-lesson3/resource/UserLanguage.java
- lesson3.resource.UserLanguage
-lesson3/decorator/NotificationDecorator.java
- lesson3.decorator.NotificationDecorator
+lesson5/product/Phone.java
+ lesson5.product.Phone
+lesson5/product/Watch.java
+ lesson5.product.Watch
+lesson4/BadCode2.java
+ lesson4.BadCode2
+lesson5/catalog/Catalog.java
+ lesson5.catalog.Catalog
 lesson5/product/NameProduct.java
  lesson5.product.NameProduct
 lesson5/person/Person.java
  lesson5.person.Person
-lesson3/factory/NotificationFactory.java
- lesson3.factory.NotificationFactory
-lesson3/Notification.java
- lesson3.Notification
-lesson3/Main.java
- lesson3.Main
-lesson2/threads/Completable.java
- lesson2.threads.Completable
-lesson3/User.java
- lesson3.User
-lesson2/TreeDirectory.java
- lesson2.TreeDirectory
-lesson5/Shop.java
- lesson5.Shop
-lesson3/PhoneNotification.java
- lesson3.PhoneNotification
-lesson2/locks/DeadLock.java
- lesson2.locks.DeadLock
-lesson3/factory/MailNotificationFactory.java
- lesson3.factory.MailNotificationFactory
-lesson2/Calendar/DayOfWeek.java
- lesson2.Calendar.DayOfWeek
-lesson2/threads/Counter.java
- lesson2.threads.Counter
-lesson3/decorator/NotificationDecoratorRU.java
- lesson3.decorator.NotificationDecoratorRU
-lesson2/threads/Main.java
- lesson2.threads.Main
 lesson2/Calendar/Main.java
  lesson2.Calendar.Main
 lesson5/Basket.java
  lesson5.Basket
-lesson5/catalog/Catalog.java
- lesson5.catalog.Catalog
+lesson2/threads/Counter.java
+ lesson2.threads.Counter
+lesson2/threads/Completable.java
+ lesson2.threads.Completable
 lesson5/Main.java
  lesson5.Main
-lesson5/person/Customer.java
- lesson5.person.Customer
-lesson4/BadCode2.java
- lesson4.BadCode2
-lesson4/Model/Shape2D.java
- lesson4.Model.Shape2D
-lesson4/Model/Qube.java
- lesson4.Model.Qube
+lesson2/TreeDirectory.java
+ lesson2.TreeDirectory
+lesson5/Shop.java
+ lesson5.Shop
 lesson4/Model/Shape.java
  lesson4.Model.Shape
+lesson2/locks/DeadLock.java
+ lesson2.locks.DeadLock
+lesson2/threads/Main.java
+ lesson2.threads.Main
+lesson2/Calendar/DayOfWeek.java
+ lesson2.Calendar.DayOfWeek
 lesson4/Model/Shape3D.java
  lesson4.Model.Shape3D
-lesson5/product/Product.java
- lesson5.product.Product
-lesson5/product/Tablet.java
- lesson5.product.Tablet
+lesson4/Model/Qube.java
+ lesson4.Model.Qube
 lesson4/Model/Square.java
  lesson4.Model.Square
-lesson5/product/Watch.java
- lesson5.product.Watch
-lesson5/product/Phone.java
- lesson5.product.Phone
+lesson4/Model/Shape2D.java
+ lesson4.Model.Shape2D
+lesson3/resource/Source.java
+ lesson3.resource.Source
+lesson3/resource/NotificationType.java
+ lesson3.resource.NotificationType
+lesson3/resource/UserLanguage.java
+ lesson3.resource.UserLanguage
+lesson3/decorator/NotificationDecorator.java
+ lesson3.decorator.NotificationDecorator
+lesson3/Notification.java
+ lesson3.Notification
+lesson3/factory/PhoneNotificationFactory.java
+ lesson3.factory.PhoneNotificationFactory
+lesson3/User.java
+ lesson3.User
+lesson3/PhoneNotification.java
+ lesson3.PhoneNotification
+lesson3/MailNotification.java
+ lesson3.MailNotification
+lesson3/factory/NotificationFactory.java
+ lesson3.factory.NotificationFactory
+lesson3/factory/MailNotificationFactory.java
+ lesson3.factory.MailNotificationFactory
+lesson3/Main.java
+ lesson3.Main

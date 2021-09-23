@@ -1,12 +1,11 @@
 package lesson3;
 
+import lesson3.resource.NotificationType;
 import lesson3.resource.UserLanguage;
 
 public interface Notification {
-    String getWelcomeText();
+    String sendNotification(NotificationType notificationType);
 
-    String getByText();
-
-    UserLanguage userCountry();
+    UserLanguage userLanguage();
 
 }

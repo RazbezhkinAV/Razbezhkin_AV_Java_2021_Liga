@@ -1,5 +1,7 @@
 package lesson3;
 
+import lesson3.decorator.NotificationDecorator;
+import lesson3.resource.NotificationType;
 import lesson3.resource.UserLanguage;
 
 public class MailNotification implements Notification {
@@ -13,19 +15,13 @@ public class MailNotification implements Notification {
     }
 
     @Override
-    public String getWelcomeText() {
-        return "...email...";
+    public UserLanguage userLanguage() {
+        return user.getLanguage();
     }
 
     @Override
-    public String getByText() {
-        return "...email...";
+    public String sendNotification(NotificationType notificationType) {
+        return user.getLanguage().name() + ": " + new NotificationDecorator(this).sendNotification(notificationType);
     }
-
-    @Override
-    public UserLanguage userCountry() {
-        return user.getCounty();
-    }
-
 
 }
