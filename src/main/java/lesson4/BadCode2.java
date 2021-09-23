@@ -1,5 +1,8 @@
 package lesson4;
 
+import lesson4.Model.Qube;
+import lesson4.Model.Square;
+
 public class BadCode2 {
     public static void main(String... args) {
         Qube qube = new Qube(1d, 1d, 1d, 10d);

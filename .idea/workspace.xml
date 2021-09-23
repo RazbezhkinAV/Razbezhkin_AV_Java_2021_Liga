@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="90844150-3ef2-43a8-8096-f058959a21d0" name="Default Changelist" comment="Added solution lesson2">
+    <list default="true" id="90844150-3ef2-43a8-8096-f058959a21d0" name="Default Changelist" comment="Added solution lesson5">
+      <change afterPath="$PROJECT_DIR$/src/main/java/lesson4/Model/Qube.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/lesson2/Calendar/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/lesson2/Calendar/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/lesson2/threads/Completable.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/lesson2/threads/Completable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson4/BadCode2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson4/BadCode2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson4/Qube.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson4/Shape3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson4/Model/Shape3D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson4/Square.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson4/Model/Square.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +25,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -63,13 +68,13 @@
       <recent name="D:\Liga\homework" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.BadCode2">
+  <component name="RunManager" selected="Application.Main (1)">
     <configuration name="BadCode2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lesson4.BadCode2" />
       <module name="homework.liga.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lesson4.*" />
+          <option name="PATTERN" value="lesson4.Model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -103,12 +108,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lesson2.Calendar.Main" />
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lesson5.Main" />
       <module name="homework.liga.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lesson2.Calendar.*" />
+          <option name="PATTERN" value="lesson5.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -116,12 +121,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TreeDirectory" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lesson2.TreeDirectory" />
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lesson2.Calendar.Main" />
       <module name="homework.liga.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lesson2.*" />
+          <option name="PATTERN" value="lesson2.Calendar.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -144,11 +149,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Counter" />
         <item itemvalue="Application.Completable" />
         <item itemvalue="Application.BadCode2" />
-        <item itemvalue="Application.TreeDirectory" />
       </list>
     </recent_temporary>
   </component>
@@ -210,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1632307906641</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added solution lesson5">
+      <created>1632317847493</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1632317847493</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -243,6 +255,7 @@
     <MESSAGE value="homework lesson-3" />
     <MESSAGE value="update gitignore" />
     <MESSAGE value="Added solution lesson2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added solution lesson2" />
+    <MESSAGE value="Added solution lesson5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added solution lesson5" />
   </component>
 </project>

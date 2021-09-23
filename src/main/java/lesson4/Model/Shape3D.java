@@ -1,4 +1,4 @@
-package lesson4;
+package lesson4.Model;
 
 public interface Shape3D {
     Double getX();
