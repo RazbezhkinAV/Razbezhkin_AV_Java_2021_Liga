@@ -28,18 +28,7 @@ public abstract class Product {
 
     @Override
     public String toString() {
-        return manufacturer + " " + productName ;
+        return manufacturer + " " + productName;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Product product)) return false;
-        return price == product.price && productName == product.productName && manufacturer == product.manufacturer;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(productName, price, manufacturer);
-    }
 }

@@ -1,51 +1,40 @@
 package lesson5;
 
+import lesson5.product.NameProduct;
 import lesson5.product.Product;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class Basket {
-    private List<Product> basketShop = new ArrayList<>();
+    private List<Product> basketCustomer = new ArrayList<>();
 
     public void add(Product product) {
         if (product != null)
-            basketShop.add(product);
+            basketCustomer.add(product);
         else
             System.out.println("Выберете продукт");
     }
 
     public void remove(Product product) {
-        if (product != null && basketShop.contains(product))
-            basketShop.remove(product);
+        if (product != null && basketCustomer.contains(product))
+            basketCustomer.remove(product);
         else
-            System.out.println("Выберете продукт");
+            System.out.println("Выберете продукт для удаления из корзины");
     }
 
     public long total() {
-        return basketShop.stream().mapToLong(Product::getPrice).sum();
+        return basketCustomer.stream().mapToLong(Product::getPrice).sum();
     }
 
-    public void getBasketShop() {
-        System.out.println(basketShop.toString());
+    public void getBasketCustomer() {
+        System.out.println(basketCustomer.toString());
     }
 
-    public void buy() {
-        System.out.println("В вашей карзине находится \n" + basketShop.toString()
+    public void getOrderInfo() {
+        System.out.println("В вашей карзине находится \n" + basketCustomer.toString()
                 + "\nСумма заказа составляет = " + total() + " рублей."
         );
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Basket basket)) return false;
-        return Objects.equals(basketShop, basket.basketShop);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(basketShop);
-    }
 }

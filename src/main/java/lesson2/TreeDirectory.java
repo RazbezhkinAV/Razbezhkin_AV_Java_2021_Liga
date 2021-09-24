@@ -11,7 +11,7 @@ public class TreeDirectory {
         TreeDirectory("src/main/");
         // Отобразите рекурсивно дерево директорий src/main/java/ru/philosophyit/internship/javabase
         // например 
-        // src/main/java/ru/philosophyit/internship/javabase/files/Main.java
+        // src/main/java/ru/philosophyit/internship/javabase/files/Shop.java
         // src/main/java/ru/philosophyit/internship/javabase/locks/DeadLock.java
         // src/main/java/ru/philosophyit/internship/javabase/locks/LiveLock.java
         // src/main/java/ru/philosophyit/internship/javabase/threads/Completable.java
