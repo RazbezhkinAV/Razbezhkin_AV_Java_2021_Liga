@@ -17,14 +17,14 @@ public class Source {
         notification.put(UserLanguage.de, notificationLanguageDE);
         notification.put(UserLanguage.en, notificationLanguageEN);
 
-        notificationLanguageRU.put(NotificationType.WELCOME, "Добрый день");
-        notificationLanguageRU.put(NotificationType.BUE, "Досвидания");
+        notificationLanguageRU.put(NotificationType.WELCOME, "Добрый день, %s!");
+        notificationLanguageRU.put(NotificationType.BUE, "Досвидания, %s!");
 
-        notificationLanguageEN.put(NotificationType.WELCOME, "Good morning");
-        notificationLanguageEN.put(NotificationType.BUE, "Goodbye");
+        notificationLanguageEN.put(NotificationType.WELCOME, "Good morning, %s!");
+        notificationLanguageEN.put(NotificationType.BUE, "Goodbye, %s!");
 
-        notificationLanguageDE.put(NotificationType.WELCOME, "Guten Morgen");
-        notificationLanguageDE.put(NotificationType.BUE, "Auf Wiedersehen");
+        notificationLanguageDE.put(NotificationType.WELCOME, "Guten Morgen, %s!");
+        notificationLanguageDE.put(NotificationType.BUE, "Auf Wiedersehen, %s!");
 
     }
 
