@@ -1,4 +1,4 @@
-package lesson5.person;
+package lesson5.model.person;
 
 public abstract class Person {
     private long id;

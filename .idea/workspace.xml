@@ -4,26 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10936f9f-3a99-4b3e-b780-f2760265e80e" name="Default Changelist" comment="">
+    <list default="true" id="10936f9f-3a99-4b3e-b780-f2760265e80e" name="Default Changelist" comment="Update solution lesson 3">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apiguardian_apiguardian_api_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_api_5_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_engine_5_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_commons_1_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_engine_1_7_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_09_2021_22_31_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_09_2021_22_31__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_09_2021_22_31__Default_Changelist_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_09_2021_12_11_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_09_2021_12_11__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_09_2021_12_11__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_09_2021_22_31__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_09_2021_12_11__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson3/MailNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson3/MailNotification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson3/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson3/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson3/Notification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson3/PhoneNotification.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson3/PhoneNotification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson3/decorator/NotificationDecorator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson3/decorator/NotificationDecorator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson3/resource/Source.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson3/resource/Source.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson3/resource/UserLanguage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson3/resource/UserLanguage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/Basket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/Basket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/Shop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/catalog/Catalog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/model/Catalog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/person/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/model/person/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/person/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/model/person/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/product/Manufacturer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/product/NameProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/model/product/NameProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/product/Phone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/model/product/Phone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/model/product/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/product/Tablet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/model/product/Tablet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/product/Watch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/model/product/Watch.java" afterDir="false" />
     </list>
     <list id="69d942c6-fd40-46e9-b08f-5eb5636366fb" name="Uncommitted changes before Checkout at 30.09.2021 14:49 [Default Changelist]" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
   </component>
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
@@ -56,10 +72,18 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="homework" />
+        <entry key="$PROJECT_DIR$" value="cc0743d70318a0fff1ee1f4b3778a7ce6eaa353b" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -85,10 +109,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Shop">
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lesson3.Main" />
       <module name="homework.liga.main" />
       <extension name="coverage">
@@ -101,8 +129,80 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lesson2.Calendar.Main" />
+      <module name="homework.liga.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lesson2.Calendar.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Shop" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lesson5.Shop" />
+      <module name="homework.liga.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lesson5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="homework [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="homework [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="dependencies" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.homework [dependencies]" />
+        <item itemvalue="Gradle.homework [build]" />
+        <item itemvalue="Application.Shop" />
+        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -116,6 +216,14 @@
       <option name="presentableId" value="Default" />
       <updated>1633002765095</updated>
     </task>
+    <task id="LOCAL-00001" summary="Update solution lesson 3">
+      <created>1633004992976</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1633004992976</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,11 +231,46 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="homework" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update solution lesson 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update solution lesson 3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/lesson5/Shop.java</url>
+          <line>9</line>
+          <properties class="lesson5.Shop" method="main">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="lesson5.Basket" memberName="basketCustomer" />
+      </pinned-members>
+    </pin-to-top-manager>
   </component>
 </project>

@@ -1,40 +1,37 @@
 package lesson5;
 
-import lesson5.product.NameProduct;
-import lesson5.product.Product;
+import lesson5.model.product.Product;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Basket {
-    private List<Product> basketCustomer = new ArrayList<>();
+    private final Map<Product, Integer> basketCustomer = new HashMap<>();
 
-    public void add(Product product) {
-        if (product != null)
-            basketCustomer.add(product);
-        else
-            System.out.println("Выберете продукт");
+    public Map<Product, Integer> getBasketCustomer() {
+        return basketCustomer;
     }
 
-    public void remove(Product product) {
-        if (product != null && basketCustomer.contains(product))
-            basketCustomer.remove(product);
-        else
-            System.out.println("Выберете продукт для удаления из корзины");
+    public void putProduct(Product product, int number){
+        basketCustomer.put(product,number);
     }
 
-    public long total() {
-        return basketCustomer.stream().mapToLong(Product::getPrice).sum();
+    public void removeProduct(Product product){
+        basketCustomer.remove(product);
     }
 
-    public void getBasketCustomer() {
-        System.out.println(basketCustomer.toString());
+    public boolean isBasketContainsProduct(Product product){
+        return basketCustomer.containsKey(product);
     }
 
-    public void getOrderInfo() {
-        System.out.println("В вашей карзине находится \n" + basketCustomer.toString()
-                + "\nСумма заказа составляет = " + total() + " рублей."
-        );
+    public Integer getProductQuantity(Product product){
+        return basketCustomer.get(product);
+    }
+
+    public boolean isBasketEmpty(){
+        return basketCustomer.isEmpty();
     }
 
 }

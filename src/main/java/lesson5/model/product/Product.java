@@ -1,16 +1,12 @@
-package lesson5.product;
-
-import java.util.Objects;
+package lesson5.model.product;
 
 public abstract class Product {
     private NameProduct productName;
     private long price;
-    private Manufacturer manufacturer;
 
-    public Product(NameProduct productName, long price, Manufacturer manufacturer) {
+    public Product(NameProduct productName, long price) {
         this.productName = productName;
         this.price = price;
-        this.manufacturer = manufacturer;
     }
 
 
@@ -22,13 +18,10 @@ public abstract class Product {
         return price;
     }
 
-    public Manufacturer getManufacturer() {
-        return manufacturer;
-    }
 
     @Override
     public String toString() {
-        return manufacturer + " " + productName;
+        return productName.toString();
     }
 
 }

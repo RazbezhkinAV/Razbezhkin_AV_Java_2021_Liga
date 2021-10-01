@@ -1,4 +1,4 @@
-package lesson5.person;
+package lesson5.model.person;
 
 import lesson5.Basket;
 import lesson5.Order;
@@ -22,7 +22,4 @@ public class Customer extends Person {
         return cash;
     }
 
-    public String buy() {
-        return new Order(basket).createOrder(this);
-    }
 }
