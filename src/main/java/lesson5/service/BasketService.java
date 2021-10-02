@@ -1,6 +1,6 @@
 package lesson5.service;
 
-import lesson5.Basket;
+import lesson5.model.Basket;
 import lesson5.exeption.NoSuchProductExistsException;
 import lesson5.exeption.ProductNotCorrectlyException;
 import lesson5.model.product.NameProduct;
@@ -48,10 +48,9 @@ public class BasketService implements Service {
     public String getBasketDescription(Basket basket) {
         StringBuilder sb = new StringBuilder();
         if (basket.isBasketEmpty())
-            sb.append("Корзина пустая");
+            sb.append("\nКорзина пустая");
         else {
             sb.append("Товар в вашей корзине:\n");
-            long total = 0L;
             for (Map.Entry<Product, Integer> entry :
                     basket.getBasketCustomer().entrySet()) {
                 Product product = entry.getKey();
@@ -60,9 +59,8 @@ public class BasketService implements Service {
                 sb.append("Название - " + product.toString())
                         .append(", колличество - " + quantity)
                         .append(", стоимость = " + (currentTotal) + "\n");
-                total += currentTotal;
             }
-            sb.append("Общая стоимость корзины составляет = " + total);
+            sb.append("Общая стоимость корзины составляет = " + basket.getBasketAmount() + "\n");
         }
         return sb.toString();
     }

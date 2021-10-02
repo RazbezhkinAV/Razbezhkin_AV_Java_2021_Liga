@@ -1,25 +1,26 @@
 package lesson5.model.person;
 
-import lesson5.Basket;
-import lesson5.Order;
-
 public class Customer extends Person {
-    private Basket basket;
+    private String phone;
     private long cash;
+    private static int id = 1;
 
-
-    public Customer(long id, String name, long cash) {
+    public Customer(String name, String phone, long cash) {
         super(id, name);
+        this.phone = phone;
         this.cash = cash;
-        basket = new Basket();
+        id++;
     }
 
-    public Basket getBasket() {
-        return basket;
+    public String getPhone() {
+        return phone;
     }
 
     public long getCash() {
         return cash;
     }
 
+    public int getId() {
+        return super.getId();
+    }
 }

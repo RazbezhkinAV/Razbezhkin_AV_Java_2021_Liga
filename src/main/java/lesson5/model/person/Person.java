@@ -1,11 +1,19 @@
 package lesson5.model.person;
 
 public abstract class Person {
-    private long id;
+    private int id;
     private String name;
 
-    public Person(long id, String name) {
+    public Person(int id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
     }
 }

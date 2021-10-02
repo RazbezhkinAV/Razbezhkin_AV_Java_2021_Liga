@@ -4,31 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10936f9f-3a99-4b3e-b780-f2760265e80e" name="Default Changelist" comment="Update solution lesson 3">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_apiguardian_apiguardian_api_1_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_api_5_7_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_jupiter_junit_jupiter_engine_5_7_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_commons_1_7_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_junit_platform_junit_platform_engine_1_7_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_19_09_2021_22_31__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_22_09_2021_12_11__Default_Changelist_.xml" beforeDir="false" />
+    <list default="true" id="10936f9f-3a99-4b3e-b780-f2760265e80e" name="Default Changelist" comment="Update solution lesson 5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/Basket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/Basket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/Basket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/model/Basket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/model/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/Shop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/catalog/Catalog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/model/Catalog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/person/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/model/person/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/person/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/model/person/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/product/Manufacturer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/product/NameProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/model/product/NameProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/product/Phone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/model/product/Phone.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/model/product/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/product/Tablet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/model/product/Tablet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/product/Watch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/model/product/Watch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/model/person/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/model/person/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/model/person/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/model/person/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/service/BasketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/service/BasketService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/service/CatalogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/service/CatalogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/service/CreatePersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/service/CreatePersonService.java" afterDir="false" />
     </list>
     <list id="69d942c6-fd40-46e9-b08f-5eb5636366fb" name="Uncommitted changes before Checkout at 30.09.2021 14:49 [Default Changelist]" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -147,7 +133,7 @@
       <module name="homework.liga.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="lesson5.*" />
+          <option name="PATTERN" value="lesson5.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -223,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633004992976</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update solution lesson 5">
+      <created>1633092183035</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1633092183035</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -252,21 +245,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Update solution lesson 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update solution lesson 3" />
+    <MESSAGE value="Update solution lesson 5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update solution lesson 5" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/lesson5/Shop.java</url>
-          <line>9</line>
-          <properties class="lesson5.Shop" method="main">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="lesson5.Basket" memberName="basketCustomer" />

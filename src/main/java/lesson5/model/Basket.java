@@ -1,4 +1,4 @@
-package lesson5;
+package lesson5.model;
 
 import lesson5.model.product.Product;
 
@@ -32,6 +32,15 @@ public class Basket {
 
     public boolean isBasketEmpty(){
         return basketCustomer.isEmpty();
+    }
+
+    public long getBasketAmount(){
+        long result = 0L;
+        for (Map.Entry<Product,Integer> entry:
+             basketCustomer.entrySet()) {
+            result += entry.getKey().getPrice() * entry.getValue();
+        }
+        return result;
     }
 
 }
