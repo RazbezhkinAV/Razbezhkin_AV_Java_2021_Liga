@@ -3,7 +3,6 @@ package ru.philosophyit.orm.basic;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -17,9 +16,6 @@ public class Posts {
 
     @Column(name = "NAME", unique = true, nullable = false)
     private String content;
-
-    @ManyToMany(mappedBy = "posts")
-    private List<Person> persons;
 
     public Posts() {
     }

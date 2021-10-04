@@ -21,7 +21,7 @@ public class Person {
     @Column(name = "LAST_NAME")
     private String lastName;
 
-    @ManyToMany(cascade = {CascadeType.ALL})
+    @OneToMany(cascade = {CascadeType.ALL})
     @JoinTable(
             name = "PERSON_POST",
             joinColumns = {@JoinColumn(name = "PERSON_ID", referencedColumnName = "ID")},
