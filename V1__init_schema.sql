@@ -26,3 +26,17 @@ create table student(
     school_id integer,
     foreign key (school_id) references school(id)
 );
+
+create table teacher_lesson(
+  teacher_id  integer not null,
+  lesson_id integer not null,
+  foreign key (teacher_id) references teacher(id),
+  foreign key (lesson_id) references lesson(id)
+);
+
+create table student_lesson(
+  student_id  integer not null,
+  lesson_id integer not null,
+  foreign key (student_id) references student(id),
+  foreign key (lesson_id) references lesson(id)
+)
