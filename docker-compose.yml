@@ -1,13 +1,11 @@
-version: "3.7"
+version: "3"
+
 services:
   postgres:
-    image: selectel
+    image: postgres:11.5-alpine
     ports:
       - "5432:5432"
-    working_dir: /postgres
-    volumes:
-          - ./:/postgres
     environment:
-      POSTGRES_DB: selectel
+      POSTGRES_DB: postgres
       POSTGRES_USER: selectel
       POSTGRES_PASSWORD: selectel
