@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  postgres:
+    image: selectel
+    ports:
+      - "5432:5432"
+    working_dir: /postgres
+    volumes:
+          - ./:/postgres
+    environment:
+      POSTGRES_DB: selectel
+      POSTGRES_USER: selectel
+      POSTGRES_PASSWORD: selectel
