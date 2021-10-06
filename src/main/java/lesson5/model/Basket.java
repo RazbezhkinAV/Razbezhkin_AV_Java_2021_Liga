@@ -8,7 +8,11 @@ import java.util.List;
 import java.util.Map;
 
 public class Basket {
-    private final Map<Product, Integer> basketCustomer = new HashMap<>();
+    private final Map<Product, Integer> basketCustomer;
+
+    public Basket() {
+        basketCustomer = new HashMap<>();
+    }
 
     public Map<Product, Integer> getBasketCustomer() {
         return basketCustomer;

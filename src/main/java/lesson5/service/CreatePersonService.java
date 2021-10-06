@@ -2,42 +2,34 @@ package lesson5.service;
 
 import lesson5.exeption.IncorrectDateException;
 import lesson5.model.person.Customer;
-import lesson5.model.person.Person;
 
 public class CreatePersonService implements Service {
 
-    public Person getNewCustomer(String name, String phone, long cash) throws IncorrectDateException {
+    public Customer getNewCustomer(String name, String phone) throws IncorrectDateException {
         String nameCustomer;
         String phoneCustomer;
-        long cashCustomer;
 
-        if(isNameCorrect(name))
+        if (isNameCorrect(name))
             nameCustomer = name;
         else
-            throw new IncorrectDateException(String.format("%s - введено не верно",name));
+            throw new IncorrectDateException(String.format("%s - введено не верно", name));
 
         if (isPhoneCorrect(phone))
-            phoneCustomer = name;
+            phoneCustomer = phone;
         else
-            throw new IncorrectDateException(String.format("%s - введено не верно",phone));
+            throw new IncorrectDateException(String.format("%s - введено не верно", phone));
 
-        if (isCashCorrect(cash))
-            cashCustomer = cash;
-        else
-            throw new IncorrectDateException(String.format("%s - не может быть отрицательный",cash));
-
-        return new Customer(nameCustomer,phoneCustomer,cashCustomer);
+        return new Customer(nameCustomer, phoneCustomer);
     }
 
-
-
     private static boolean isNameCorrect(String name) {
-        String regex = "^[a-z0-9_-]{3,15}$";
+        if (name == null) return false;
+        String regex = "^[A-Za-z]{3,15}$";
         return name.matches(regex);
     }
 
     private static boolean isPhoneCorrect(String phone) {
-        String regex = "^((8|\\+7)[\\- ]?)?(\\(?\\d{3}\\)?[\\- ]?)?[\\d\\- ]{7,10}$";
+        String regex = "^((8|\\+7)?)[0-9]{10}$";
         return phone.matches(regex);
     }
 

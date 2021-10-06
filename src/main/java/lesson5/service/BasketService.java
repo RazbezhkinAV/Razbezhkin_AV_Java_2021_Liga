@@ -10,6 +10,10 @@ import java.util.Map;
 
 public class BasketService implements Service {
 
+    public Basket createNewBasket(){
+        return new Basket();
+    }
+
     public void addProductToBasket(Basket basket, NameProduct nameProduct) throws ProductNotCorrectlyException {
         if (!CatalogService.checkExistProductInCatalog(nameProduct)) {
             throw new ProductNotCorrectlyException(String.format("%s - нет в наличии", nameProduct));
@@ -46,23 +50,21 @@ public class BasketService implements Service {
     }
 
     public String getBasketDescription(Basket basket) {
-        StringBuilder sb = new StringBuilder();
         if (basket.isBasketEmpty())
-            sb.append("\nКорзина пустая");
+            return "\nКорзина пустая";
         else {
+            StringBuilder sb = new StringBuilder();
             sb.append("Товар в вашей корзине:\n");
             for (Map.Entry<Product, Integer> entry :
                     basket.getBasketCustomer().entrySet()) {
                 Product product = entry.getKey();
                 Integer quantity = entry.getValue();
                 long currentTotal = product.getPrice() * quantity;
-                sb.append("Название - " + product.toString())
-                        .append(", колличество - " + quantity)
-                        .append(", стоимость = " + (currentTotal) + "\n");
+                sb.append("Название - " + product.toString() + ", колличество - " + quantity + ", стоимость = " + (currentTotal) + "\n");
             }
             sb.append("Общая стоимость корзины составляет = " + basket.getBasketAmount() + "\n");
+            return sb.toString();
         }
-        return sb.toString();
     }
 
 }

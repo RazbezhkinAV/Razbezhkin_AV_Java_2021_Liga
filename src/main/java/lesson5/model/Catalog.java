@@ -6,7 +6,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Catalog {
-    private final Map<NameProduct, Product> catalog = new HashMap<>();
+    private final Map<NameProduct, Product> catalog;
+
+    public Catalog() {
+        catalog = new HashMap<>();
+    }
 
     public void addProduct(NameProduct nameProduct){
         catalog.put(nameProduct,ProductFactory.createProduct(nameProduct));
