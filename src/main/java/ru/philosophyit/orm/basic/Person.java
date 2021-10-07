@@ -37,7 +37,7 @@ public class Person {
     )
     private List<Person> friends;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "school_id")
     private School school;
 

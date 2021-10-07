@@ -17,6 +17,17 @@ public class School {
     @Column(name = "NAME", unique = true, nullable = false)
     private String name;
 
+    @Column(name = "ADDRESS")
+    private String address;
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     public School() {
     }
 
