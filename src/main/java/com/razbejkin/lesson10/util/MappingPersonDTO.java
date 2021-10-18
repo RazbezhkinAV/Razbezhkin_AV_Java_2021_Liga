@@ -4,11 +4,11 @@ import com.razbejkin.lesson10.dto.FriendDTO;
 import com.razbejkin.lesson10.dto.PersonDTO;
 import com.razbejkin.lesson10.entity.Person;
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import java.util.stream.Collectors;
 
-@Service
+@Component
 @RequiredArgsConstructor
 public class MappingPersonDTO {
 

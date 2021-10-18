@@ -2,9 +2,9 @@ package com.razbejkin.lesson10.util;
 
 import com.razbejkin.lesson10.dto.PostDTO;
 import com.razbejkin.lesson10.entity.Posts;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
-@Service
+@Component
 public class MappingPostDTO {
 
     public PostDTO mapToPostDTO(Posts posts){

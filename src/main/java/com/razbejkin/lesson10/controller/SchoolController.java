@@ -15,12 +15,12 @@ public class SchoolController {
 
     private final SchoolService schoolService;
 
-    @GetMapping("/")
+    @GetMapping
     public List<School> showAllSchool(){
         return schoolService.getAllSchool();
     }
 
-    @PostMapping("/")
+    @PostMapping
     public void savePerson(@RequestBody School school){
         schoolService.saveSchool(school);
     }
@@ -36,7 +36,7 @@ public class SchoolController {
         return "School with ID "+id+" was deleted";
     }
 
-    @PutMapping("/")
+    @PutMapping
     public School updatePerson(@RequestBody School school){
         schoolService.saveSchool(school);
         return school;

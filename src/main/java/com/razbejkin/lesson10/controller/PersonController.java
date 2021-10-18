@@ -16,12 +16,12 @@ public class PersonController {
 
     private final PersonService personService;
 
-    @GetMapping("/")
+    @GetMapping
     public List<PersonDTO> findAllPerson(){
         return personService.findAllPerson();
     }
 
-    @PostMapping("/")
+    @PostMapping
     public void savePerson(@RequestBody Person person){
         personService.savePerson(person);
     }
@@ -37,7 +37,7 @@ public class PersonController {
         return "Person with ID "+id+" was deleted";
     }
 
-    @PutMapping("/")
+    @PutMapping
     public String updatePerson(@RequestBody Person person){
         personService.savePerson(person);
         return "Updated person data";

@@ -3,13 +3,11 @@ package com.razbejkin.lesson10.entity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-import java.util.UUID;
 
 
 @Entity
@@ -17,13 +15,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Person {
-
-    @Id
-    @Column(name = "id")
-    @GeneratedValue(generator = "UUIDCustomGenerator")
-    @GenericGenerator(name = "UUIDCustomGenerator", strategy = "com.razbejkin.lesson10.util.UUIDCustomGenerator")
-    private UUID id;
+public class Person extends EntityBase{
 
     @Column(name = "name")
     private String name;
