@@ -5,9 +5,15 @@ import com.razbejkin.lesson10.dto.PersonDTO;
 import com.razbejkin.lesson10.entity.Person;
 import com.razbejkin.lesson10.servise.PersonService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/person")
@@ -17,8 +23,12 @@ public class PersonController {
     private final PersonService personService;
 
     @GetMapping
-    public List<PersonDTO> findAllPerson(){
-        return personService.findAllPerson();
+    public Page<PersonDTO> findAllPerson(@RequestParam Optional<Integer> page,
+                                      @RequestParam Optional<String> sortBy){
+        return personService.findAllPerson(PageRequest.of(
+                page.orElse(0),
+                10,
+                Sort.Direction.ASC,sortBy.orElse("id")));
     }
 
     @PostMapping

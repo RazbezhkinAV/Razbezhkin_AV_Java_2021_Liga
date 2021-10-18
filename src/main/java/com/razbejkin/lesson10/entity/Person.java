@@ -15,7 +15,7 @@ import java.util.Objects;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Person extends EntityBase{
+public class    Person extends EntityBase{
 
     @Column(name = "name")
     private String name;
