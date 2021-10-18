@@ -4,6 +4,8 @@ import com.razbejkin.lesson10.dto.FriendDTO;
 import com.razbejkin.lesson10.dto.PersonDTO;
 import com.razbejkin.lesson10.entity.Person;
 import com.razbejkin.lesson10.servise.PersonService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -16,12 +18,14 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/person")
+@RequestMapping("/lesson10/person")
 @RequiredArgsConstructor
+@Api(value = "Person Crud operation",description ="Person Crud operation" )
 public class PersonController {
 
     private final PersonService personService;
 
+    @ApiOperation(value = "find all person")
     @GetMapping
     public Page<PersonDTO> findAllPerson(@RequestParam Optional<Integer> page,
                                       @RequestParam Optional<Integer> size,
@@ -32,39 +36,43 @@ public class PersonController {
                 Sort.Direction.ASC,sortBy.orElse("id")));
     }
 
+    @ApiOperation(value = "save person")
     @PostMapping
     public void savePerson(@RequestBody Person person){
         personService.savePerson(person);
     }
 
+    @ApiOperation(value = "find person by ID")
     @GetMapping("/{id}")
     public PersonDTO findPerson(@PathVariable("id") String id){
        return personService.findPersonById(id);
     }
 
+    @ApiOperation(value = "delete person be ID")
     @DeleteMapping("/{id}")
-    public String deletePerson(@PathVariable("id") String id){
+    public void deletePerson(@PathVariable("id") String id){
         personService.deletePerson(id);
-        return "Person with ID "+id+" was deleted";
     }
 
+    @ApiOperation(value = "updated person data")
     @PutMapping
-    public String updatePerson(@RequestBody Person person){
+    public void updatePerson(@RequestBody Person person){
         personService.savePerson(person);
-        return "Updated person data";
     }
 
+    @ApiOperation(value = "add friend")
     @PostMapping("/friends/{id}")
-    public String addFriend(@PathVariable("id") String personId,@RequestBody String friendId){
+    public void addFriend(@PathVariable("id") String personId,@RequestBody String friendId){
         personService.addFriend(personId, friendId);
-        return "add friend";
     }
 
+    @ApiOperation(value = "show all friend person")
     @GetMapping("/friends/{id}")
     public List<FriendDTO> showFriends(@PathVariable("id") String id){
         return personService.showFriends(id);
     }
 
+    @ApiOperation(value = "delete friend person")
     @DeleteMapping("/friends/{id}")
     public String deleteFriend(@PathVariable("id") String personId,@RequestBody String friendId){
         personService.deleteFriend(personId, friendId);
