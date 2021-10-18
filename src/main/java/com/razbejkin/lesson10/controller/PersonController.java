@@ -24,10 +24,11 @@ public class PersonController {
 
     @GetMapping
     public Page<PersonDTO> findAllPerson(@RequestParam Optional<Integer> page,
+                                      @RequestParam Optional<Integer> size,
                                       @RequestParam Optional<String> sortBy){
         return personService.findAllPerson(PageRequest.of(
                 page.orElse(0),
-                10,
+                size.orElse(5),
                 Sort.Direction.ASC,sortBy.orElse("id")));
     }
 
