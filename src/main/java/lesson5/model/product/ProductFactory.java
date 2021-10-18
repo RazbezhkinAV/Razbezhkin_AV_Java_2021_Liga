@@ -7,6 +7,7 @@ public class ProductFactory {
             case IPHONE_X: return new Phone(nameProduct,80_000);
             case MI_BAND_6: return new Watch(nameProduct,5_000);
             case GALAXY_TABLE_A: return new Tablet(nameProduct,45_000);
+            case IPHONE_XS_MAX: return new Phone(nameProduct,120_000);
         }
         return null;
     }

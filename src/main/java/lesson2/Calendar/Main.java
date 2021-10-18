@@ -33,12 +33,12 @@ public class Main {
 
         int count = 1; //счётчик
 
-        int[][] matrix = new int[5][7];
+        int[][] matrix = new int[6][7];
 
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
                 if (i == 0 && j < firstDayOfWeek - 1) {
-                    matrix[i][j] = previousMont - ((firstDayOfWeek - 1) - j);
+                    matrix[i][j] = previousMont - ((firstDayOfWeek-2) - j);
                 }
                 if (i == 0 && j >= firstDayOfWeek - 1) {
                     matrix[i][j] = count++;

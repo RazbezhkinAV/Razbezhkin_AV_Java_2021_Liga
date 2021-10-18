@@ -5,11 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10936f9f-3a99-4b3e-b780-f2760265e80e" name="Default Changelist" comment="Update solution lesson 5">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/homework.liga.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/homework.liga.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_30_09_2021_14_49_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_30_09_2021_14_49__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/source-classes-mapping.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson2/Calendar/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson2/Calendar/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/Shop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/Shop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/service/BasketService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/service/BasketService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/service/CreatePersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/service/CreatePersonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/model/Catalog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/model/Catalog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/model/product/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/model/product/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/model/product/ProductFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/model/product/ProductFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/service/CatalogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/service/CatalogService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lesson5/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lesson5/service/OrderService.java" afterDir="false" />
     </list>
     <list id="69d942c6-fd40-46e9-b08f-5eb5636366fb" name="Uncommitted changes before Checkout at 30.09.2021 14:49 [Default Changelist]" comment="" />
@@ -59,6 +67,7 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -91,26 +100,30 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/lesson5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
-  <component name="RunManager" selected="Application.Shop">
-    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lesson3.Main" />
-      <module name="homework.liga.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="lesson3.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Liga\homework\src" />
+      <recent name="D:\Liga\homework\src\main" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="lesson5.service" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lesson2.Calendar.Main" />
       <module name="homework.liga.main" />
@@ -123,40 +136,6 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="Shop" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lesson5.Shop" />
-      <module name="homework.liga.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="lesson5.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="homework [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
     </configuration>
     <configuration name="homework [dependencies]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -179,13 +158,66 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="homework [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="CatalogServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework.liga.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lesson5.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="lesson5.service" />
+      <option name="MAIN_CLASS_NAME" value="lesson5.service.CatalogServiceTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CatalogServiceTest.correctCheckExistProductInCatalog" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="homework.liga.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="lesson5.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="lesson5.service" />
+      <option name="MAIN_CLASS_NAME" value="lesson5.service.CatalogServiceTest" />
+      <option name="METHOD_NAME" value="correctCheckExistProductInCatalog" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.homework [dependencies]" />
-        <item itemvalue="Gradle.homework [build]" />
-        <item itemvalue="Application.Shop" />
-        <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.CatalogServiceTest.correctCheckExistProductInCatalog" />
+        <item itemvalue="JUnit.CatalogServiceTest" />
+        <item itemvalue="Gradle.homework [test]" />
+        <item itemvalue="Gradle.homework [dependencies]" />
       </list>
     </recent_temporary>
   </component>
@@ -197,6 +229,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1633002765095</updated>
+      <workItem from="1634372677559" duration="13000" />
+      <workItem from="1634551623237" duration="745000" />
     </task>
     <task id="LOCAL-00001" summary="Update solution lesson 3">
       <created>1633004992976</created>
@@ -219,8 +253,18 @@
       <option name="project" value="LOCAL" />
       <updated>1633191282107</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Update solution lesson 5">
+      <created>1633515822529</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1633515822529</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -252,6 +296,18 @@
     <option name="LAST_COMMIT_MESSAGE" value="Update solution lesson 5" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/lesson5/service/OrderService.java</url>
+          <line>25</line>
+          <properties class="lesson5.service.OrderService" method="getOrderDescription">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="lesson5.Basket" memberName="basketCustomer" />

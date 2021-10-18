@@ -4,10 +4,10 @@ lesson3/resource/Source.java
  lesson3.resource.Source
 lesson3/factory/PhoneNotificationFactory.java
  lesson3.factory.PhoneNotificationFactory
-lesson2/Calendar/Main.java
- lesson2.Calendar.Main
-lesson5/model/product/Phone.java
- lesson5.model.product.Phone
+lesson5/model/Catalog.java
+ lesson5.model.Catalog
+lesson5/model/product/NameProduct.java
+ lesson5.model.product.NameProduct
 lesson3/MailNotification.java
  lesson3.MailNotification
 lesson4/BadCode2.java
@@ -20,16 +20,16 @@ lesson4/Model/Qube.java
  lesson4.Model.Qube
 lesson3/resource/UserLanguage.java
  lesson3.resource.UserLanguage
-lesson5/Shop.java
- lesson5.Shop
+lesson5/service/CreatePersonService.java
+ lesson5.service.CreatePersonService
 lesson4/Model/Shape.java
  lesson4.Model.Shape
 lesson4/Model/Shape3D.java
  lesson4.Model.Shape3D
 lesson3/decorator/NotificationDecorator.java
  lesson3.decorator.NotificationDecorator
-lesson5/model/product/Product.java
- lesson5.model.product.Product
+lesson5/model/person/Customer.java
+ lesson5.model.person.Customer
 lesson4/Model/Square.java
  lesson4.Model.Square
 lesson3/factory/NotificationFactory.java
@@ -38,28 +38,28 @@ lesson3/resource/NotificationType.java
  lesson3.resource.NotificationType
 lesson3/Notification.java
  lesson3.Notification
-lesson5/service/CatalogService.java
- lesson5.service.CatalogService
-lesson5/model/product/Tablet.java
- lesson5.model.product.Tablet
+lesson5/exeption/ProductNotCorrectlyException.java
+ lesson5.exeption.ProductNotCorrectlyException
+lesson5/exeption/IncorrectDateException.java
+ lesson5.exeption.IncorrectDateException
 lesson3/Main.java
  lesson3.Main
 lesson5/exeption/NoSuchProductExistsException.java
  lesson5.exeption.NoSuchProductExistsException
-lesson5/model/product/Watch.java
- lesson5.model.product.Watch
+lesson2/threads/Counter.java
+ lesson2.threads.Counter
 lesson2/threads/Main.java
  lesson2.threads.Main
-lesson5/model/Catalog.java
- lesson5.model.Catalog
+lesson5/service/Service.java
+ lesson5.service.Service
 lesson3/User.java
  lesson3.User
 lesson3/factory/MailNotificationFactory.java
  lesson3.factory.MailNotificationFactory
 lesson2/TreeDirectory.java
  lesson2.TreeDirectory
-lesson5/model/Basket.java
- lesson5.model.Basket
+lesson5/Shop.java
+ lesson5.Shop
 lesson3/PhoneNotification.java
  lesson3.PhoneNotification
 lesson2/locks/DeadLock.java
@@ -70,28 +70,28 @@ lesson2/Calendar/DayOfWeek.java
  lesson2.Calendar.DayOfWeek
 lesson5/model/person/Person.java
  lesson5.model.person.Person
-lesson5/exeption/ProductNotCorrectlyException.java
- lesson5.exeption.ProductNotCorrectlyException
+lesson5/model/Order.java
+ lesson5.model.Order
+lesson5/service/BasketService.java
+ lesson5.service.BasketService
+lesson5/Controller.java
+ lesson5.Controller
+lesson5/model/product/Phone.java
+ lesson5.model.product.Phone
+lesson5/model/product/Product.java
+ lesson5.model.product.Product
+lesson5/model/Basket.java
+ lesson5.model.Basket
+lesson5/service/OrderService.java
+ lesson5.service.OrderService
+lesson5/model/product/Watch.java
+ lesson5.model.product.Watch
+lesson5/service/CatalogService.java
+ lesson5.service.CatalogService
 lesson5/model/product/ProductFactory.java
  lesson5.model.product.ProductFactory
  lesson5.model.product.ProductFactory$1
-lesson5/model/person/Customer.java
- lesson5.model.person.Customer
-lesson5/model/product/NameProduct.java
- lesson5.model.product.NameProduct
-lesson2/threads/Counter.java
- lesson2.threads.Counter
-lesson5/service/BasketService.java
- lesson5.service.BasketService
-lesson5/service/Service.java
- lesson5.service.Service
-lesson5/exeption/IncorrectDateException.java
- lesson5.exeption.IncorrectDateException
-lesson5/model/Order.java
- lesson5.model.Order
-lesson5/Controller.java
- lesson5.Controller
-lesson5/service/OrderService.java
- lesson5.service.OrderService
-lesson5/service/CreatePersonService.java
- lesson5.service.CreatePersonService
+lesson5/model/product/Tablet.java
+ lesson5.model.product.Tablet
+lesson2/Calendar/Main.java
+ lesson2.Calendar.Main
