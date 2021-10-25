@@ -116,7 +116,10 @@ public class OnlineTicketService {
     }
 
     public TicketDto getNearActiveTicket() {
-        try {
+
+        if (ticketDtoList.isEmpty())
+            return null;
+        else
             return getBusyTicket().stream()
                     .filter(x -> x.getPerson_phone() != "")
                     .filter(x -> {
@@ -126,11 +129,7 @@ public class OnlineTicketService {
                     })
                     .collect(Collectors.toList())
                     .get(0);
-        } catch (Exception e) {
-            e.getMessage();
-        }
 
-        return null;
     }
 
     public void lateForVisit(LocalTime localTime) {
