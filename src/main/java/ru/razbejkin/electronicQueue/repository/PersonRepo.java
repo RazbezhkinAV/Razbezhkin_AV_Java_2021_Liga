@@ -1,4 +1,4 @@
-package ru.razbejkin.electronicQueue.dao;
+package ru.razbejkin.electronicQueue.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -7,7 +7,7 @@ import ru.razbejkin.electronicQueue.entity.Person;
 import java.util.UUID;
 
 @Repository
-public interface PersonDao extends JpaRepository<Person, UUID> {
+public interface PersonRepo extends JpaRepository<Person, UUID> {
 
     Person findByLogin(String login);
 

@@ -60,47 +60,58 @@ public class OnlineTicketService {
         return false;
     }
 
-    public void setTicketIsBusy(String time, PersonDto person) {
+    private TicketDto findTicket(String time) {
         for (int i = 0; i < ticketDtoList.size(); i++) {
-            if (ticketDtoList.get(i).getTime().equals(time)) {
-                TicketDto ticketDto = ticketDtoList.get(i);
-                ticketDto.setFree(false);
-                ticketDto.setPerson_phone(person.getPhoneNumber());
-                ticketDtoList.set(i, ticketDto);
+            TicketDto ticketDto = ticketDtoList.get(i);
+            if (ticketDto.getTime().equals(time)) {
+                return ticketDto;
             }
+        }
+        return null;
+    }
+
+    private void refreshTicket(TicketDto ticket) {
+        for (int i = 0; i < ticketDtoList.size(); i++) {
+            TicketDto ticketDto = ticketDtoList.get(i);
+            if (ticketDto.getTime().equals(ticket.getTime())) {
+                ticketDtoList.set(i, ticket);
+            }
+        }
+    }
+
+    public void setTicketIsBusy(String time, PersonDto person) {
+        TicketDto ticketDto = findTicket(time);
+        if (ticketDto != null) {
+            ticketDto.setFree(false);
+            ticketDto.setPerson_phone(person.getPhoneNumber());
+            refreshTicket(ticketDto);
         }
     }
 
     public void setTicketIsVisit(String time) {
-        for (int i = 0; i < ticketDtoList.size(); i++) {
-            if (ticketDtoList.get(i).getTime().equals(time)) {
-                TicketDto ticketDto = ticketDtoList.get(i);
-                ticketDto.setVisit(true);
-                ticketDtoList.set(i, ticketDto);
-            }
+        TicketDto ticketDto = findTicket(time);
+        if (ticketDto != null) {
+            ticketDto.setVisit(true);
+            refreshTicket(ticketDto);
         }
     }
 
     public void setTicketIsConfirm(String time) {
-        for (int i = 0; i < ticketDtoList.size(); i++) {
-            if (ticketDtoList.get(i).getTime().equals(time)) {
-                TicketDto ticketDto = ticketDtoList.get(i);
-                ticketDto.setConfirm(true);
-                ticketDtoList.set(i, ticketDto);
-            }
+        TicketDto ticketDto = findTicket(time);
+        if (ticketDto != null) {
+            ticketDto.setConfirm(true);
+            refreshTicket(ticketDto);
         }
     }
 
     public void setTicketIsFree(String time) {
-        for (int i = 0; i < ticketDtoList.size(); i++) {
-            if (ticketDtoList.get(i).getTime().equals(time)) {
-                TicketDto ticketDto = ticketDtoList.get(i);
-                ticketDto.setFree(true);
-                ticketDto.setPerson_phone("");
-                ticketDto.setConfirm(false);
-                ticketDto.setVisit(false);
-                ticketDtoList.set(i, ticketDto);
-            }
+        TicketDto ticketDto = findTicket(time);
+        if (ticketDto != null) {
+            ticketDto.setFree(true);
+            ticketDto.setPerson_phone("");
+            ticketDto.setConfirm(false);
+            ticketDto.setVisit(false);
+            refreshTicket(ticketDto);
         }
     }
 
@@ -116,19 +127,19 @@ public class OnlineTicketService {
     }
 
     public TicketDto getNearActiveTicket() {
+        List<TicketDto> activeTicket= getBusyTicket().stream()
+                .filter(x -> x.getPerson_phone() != "")
+                .filter(x -> {
+                    LocalTime localTime = LocalTime.now();
+                    LocalTime time = LocalTime.parse(x.getTime()).plusMinutes(30);
+                    return localTime.isBefore(time);
+                })
+                .collect(Collectors.toList());
 
-        if (ticketDtoList.isEmpty())
+        if(activeTicket.isEmpty())
             return null;
         else
-            return getBusyTicket().stream()
-                    .filter(x -> x.getPerson_phone() != "")
-                    .filter(x -> {
-                        LocalTime localTime = LocalTime.now();
-                        LocalTime time = LocalTime.parse(x.getTime()).plusMinutes(30);
-                        return localTime.isBefore(time);
-                    })
-                    .collect(Collectors.toList())
-                    .get(0);
+            return activeTicket.get(0);
 
     }
 
@@ -140,11 +151,8 @@ public class OnlineTicketService {
             TicketDto ticketDto = ticketDtoList.get(i);
             if (currentTime.equals(time) && !ticketDto.isVisit()) {
                 ticketService.deleteByTime(ticketDto.getTime());
-                ticketDto.setFree(true);
-                ticketDto.setPerson_phone("");
-                ticketDto.setConfirm(false);
-                ticketDto.setVisit(false);
-                ticketDtoList.set(i, ticketDto);
+                setTicketIsFree(ticketDto.getTime());
+                refreshTicket(ticketDto);
             }
         }
     }

@@ -11,10 +11,9 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import ru.razbejkin.electronicQueue.filter.CustomAuthenticationFilter;
-import ru.razbejkin.electronicQueue.filter.CustomAuthorizationFilter;
+import ru.razbejkin.electronicQueue.security.filter.CustomAuthenticationFilter;
+import ru.razbejkin.electronicQueue.security.filter.CustomAuthorizationFilter;
 
 @Configuration
 @EnableWebSecurity

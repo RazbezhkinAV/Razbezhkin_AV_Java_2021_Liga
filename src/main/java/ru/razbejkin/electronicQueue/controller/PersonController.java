@@ -17,18 +17,18 @@ public class PersonController {
     private final PersonService personService;
 
     @GetMapping("/info")
-    public PersonDto showMyInfo(HttpServletRequest request) {
-        return personService.showMyInfo(request);
+    public PersonDto showMyInfo() {
+        return personService.showMyInfo();
     }
 
     @GetMapping("/myTicket")
-    public List<TicketDto> showMyTicket(HttpServletRequest request) {
-        return personService.showMyTicket(request);
+    public List<TicketDto> showMyTicket() {
+        return personService.showMyTicket();
     }
 
     @PostMapping("/onlineRegistration")
-    public String onlineRegistrationTicket(HttpServletRequest request, @RequestBody String time) {
-        return personService.onlineRegisterTicket(request, time);
+    public String onlineRegistrationTicket(@RequestBody String time) {
+        return personService.onlineRegisterTicket(time);
     }
 
     @GetMapping("/freeTickets")
@@ -42,13 +42,13 @@ public class PersonController {
     }
 
     @GetMapping("/liveQueue/getToLine")
-    public String getToLine(HttpServletRequest request) {
-        return personService.getToLine(request);
+    public String getToLine() {
+        return personService.getToLine();
     }
 
     @GetMapping("/liveQueue/getOut")
     public String getOutOfQueue(HttpServletRequest request) {
-        return personService.getOutOfQueue(request);
+        return personService.getOutOfQueue();
     }
 
     @GetMapping("/ticket/confirm/{phone}/{time}")

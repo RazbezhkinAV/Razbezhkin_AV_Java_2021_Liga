@@ -6,13 +6,16 @@ import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import ru.razbejkin.electronicQueue.dao.PersonDao;
+import org.springframework.transaction.annotation.Transactional;
+import ru.razbejkin.electronicQueue.repository.PersonRepo;
 import ru.razbejkin.electronicQueue.dto.PersonDto;
 import ru.razbejkin.electronicQueue.dto.TicketDto;
 import ru.razbejkin.electronicQueue.entity.Person;
@@ -21,8 +24,6 @@ import ru.razbejkin.electronicQueue.model.LiveQueueService;
 import ru.razbejkin.electronicQueue.util.MappingDTO;
 import ru.razbejkin.electronicQueue.model.OnlineTicketService;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -30,17 +31,17 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
-@Transactional
+@Transactional(readOnly = true)
 public class PersonServiceImpl implements PersonService, UserDetailsService {
 
-    private final PersonDao personDao;
+    private final PersonRepo personRepo;
     private final OnlineTicketService onlineTicketService;
     private final LiveQueueService liveQueueService;
     private final TicketService ticketService;
 
     @Override
     public UserDetails loadUserByUsername(String login) throws UsernameNotFoundException {
-        Person person = personDao.findByLogin(login);
+        Person person = personRepo.findByLogin(login);
         if (person == null) {
             throw new UsernameNotFoundException("Person not found in database");
         }
@@ -53,33 +54,30 @@ public class PersonServiceImpl implements PersonService, UserDetailsService {
         return new User(person.getLogin(), person.getPassword(), authorities);
     }
 
-    public Person myInfo(HttpServletRequest request) {
-        String authorizationHeader = request.getHeader(HttpHeaders.AUTHORIZATION);
-        String token = authorizationHeader.substring("Bearer ".length());
-        Algorithm algorithm = Algorithm.HMAC256("oneliner".getBytes());
-        JWTVerifier verifier = JWT.require(algorithm).build();
-        DecodedJWT decodedJWT = verifier.verify(token);
-        String login = decodedJWT.getSubject();
-        return personDao.findByLogin(login);
+    public Person info(){
+        UsernamePasswordAuthenticationToken user = (UsernamePasswordAuthenticationToken) SecurityContextHolder.getContext().getAuthentication();
+        String login = user.getName();
+        return personRepo.findByLogin(login);
     }
 
     @Override
-    public PersonDto showMyInfo(HttpServletRequest request) {
-        Person person = myInfo(request);
+    public PersonDto showMyInfo() {
+        Person person = info();
         return MappingDTO.mapToPersonDto(person);
     }
 
     @Override
-    public List<TicketDto> showMyTicket(HttpServletRequest request) {
-        return myInfo(request).getVisitHistory().stream()
+    public List<TicketDto> showMyTicket() {
+        return info().getVisitHistory().stream()
                 .map(MappingDTO::mapToTicketDto)
                 .collect(Collectors.toList());
     }
 
     @Override
-    public String onlineRegisterTicket(HttpServletRequest request, String time) {
+    @Transactional
+    public String onlineRegisterTicket(String time) {
         if (onlineTicketService.ticketIsFree(time)) {
-            Person person = myInfo(request);
+            Person person = info();
 
             Ticket ticket = new Ticket();
             ticket.setTime(time);
@@ -108,8 +106,8 @@ public class PersonServiceImpl implements PersonService, UserDetailsService {
     }
 
     @Override
-    public String getToLine(HttpServletRequest request) {
-        Person person = myInfo(request);
+    public String getToLine() {
+        Person person = info();
 
         if (liveQueueService.addPersonToQueue(person))
             return "Номер в очереди " + liveQueueService.numberInQueue(person);
@@ -118,8 +116,8 @@ public class PersonServiceImpl implements PersonService, UserDetailsService {
     }
 
     @Override
-    public String getOutOfQueue(HttpServletRequest request) {
-        Person person = myInfo(request);
+    public String getOutOfQueue() {
+        Person person = info();
 
         liveQueueService.removePersonFromQueue(person);
 
@@ -128,10 +126,11 @@ public class PersonServiceImpl implements PersonService, UserDetailsService {
 
     @Override
     public Person findByPhoneNumber(String phoneNumber) {
-        return personDao.findByPhoneNumber(phoneNumber);
+        return personRepo.findByPhoneNumber(phoneNumber);
     }
 
     @Override
+    @Transactional
     public String confirmTicket(String phone, String time) {
         Ticket ticket = ticketService.findByTime(time);
         ticket.setConfirm(true);

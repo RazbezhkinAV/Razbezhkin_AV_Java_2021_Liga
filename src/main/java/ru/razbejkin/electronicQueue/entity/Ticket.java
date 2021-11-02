@@ -14,10 +14,7 @@ import java.util.Objects;
 @Getter
 @Setter
 @NoArgsConstructor
-public class Ticket {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+public class Ticket extends EntityBase{
 
     @ManyToOne
     @OnDelete(action = OnDeleteAction.CASCADE)
@@ -43,16 +40,4 @@ public class Ticket {
         this.confirm = false;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Ticket ticket = (Ticket) o;
-        return id == ticket.id && Objects.equals(person, ticket.person) && Objects.equals(time, ticket.time);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, person, time);
-    }
 }

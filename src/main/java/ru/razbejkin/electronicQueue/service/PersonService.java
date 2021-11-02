@@ -10,19 +10,19 @@ import java.util.List;
 
 public interface PersonService {
 
-    PersonDto showMyInfo(HttpServletRequest request);
+    PersonDto showMyInfo();
 
-    List<TicketDto> showMyTicket(HttpServletRequest request);
+    List<TicketDto> showMyTicket();
 
-    String onlineRegisterTicket(HttpServletRequest request, String time);
+    String onlineRegisterTicket(String time);
 
     List<TicketDto> showFreeTicket();
 
     List<PersonDto> showLiveQueue();
 
-    String getToLine(HttpServletRequest request);
+    String getToLine();
 
-    String getOutOfQueue(HttpServletRequest request);
+    String getOutOfQueue();
 
     Person findByPhoneNumber(String phoneNumber);
 

@@ -2,6 +2,7 @@ package ru.razbejkin.electronicQueue.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import ru.razbejkin.electronicQueue.dto.PersonDto;
 import ru.razbejkin.electronicQueue.dto.TicketDto;
 import ru.razbejkin.electronicQueue.entity.Person;
@@ -12,13 +13,12 @@ import ru.razbejkin.electronicQueue.model.Reception;
 import ru.razbejkin.electronicQueue.model.ReceptionService;
 import ru.razbejkin.electronicQueue.util.MappingDTO;
 
-import javax.transaction.Transactional;
 import java.time.LocalTime;
 import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-@Transactional
+@Transactional(readOnly = true)
 public class ManagerServiceImpl implements ManagerService {
 
     private final PersonService personService;
@@ -50,6 +50,7 @@ public class ManagerServiceImpl implements ManagerService {
     }
 
     @Override
+    @Transactional
     public String registrationVisit(String personPhone) {
         Person person = personService.findByPhoneNumber(personPhone);
         if (person == null)
@@ -83,6 +84,7 @@ public class ManagerServiceImpl implements ManagerService {
     }
 
     @Override
+    @Transactional
     public String removeTicket(String time) {
         Ticket ticket = ticketService.findByTime(time);
         if (ticket == null)

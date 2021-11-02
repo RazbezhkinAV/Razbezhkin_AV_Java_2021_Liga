@@ -28,9 +28,9 @@ public class MyConfigur {
     @Bean
     public CommandLineRunner run(AdminService adminService, OnlineTicketService onlineTicketService) {
         return args -> {
-            adminService.saveRole(new Role(null, "ROLE_ADMIN"));
-            adminService.saveRole(new Role(null, "ROLE_MANAGER"));
-            adminService.saveRole(new Role(null, "ROLE_PERSON"));
+            adminService.saveRole(new Role("ROLE_ADMIN"));
+            adminService.saveRole(new Role("ROLE_MANAGER"));
+            adminService.saveRole(new Role("ROLE_PERSON"));
 
             adminService.savePerson(new Person("admin", "1234", "Adomin", null, "911", null, null));
             adminService.savePerson(new Person("sasha01", "1234", "Sasha", "Razbejkin", "89996690413", "sasha93@gmail.com", null));
