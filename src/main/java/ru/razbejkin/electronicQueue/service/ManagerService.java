@@ -2,7 +2,7 @@ package ru.razbejkin.electronicQueue.service;
 
 import ru.razbejkin.electronicQueue.dto.PersonDto;
 import ru.razbejkin.electronicQueue.dto.TicketDto;
-import ru.razbejkin.electronicQueue.model.Reception;
+import ru.razbejkin.electronicQueue.util.Reception;
 
 import java.util.List;
 

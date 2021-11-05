@@ -21,32 +21,32 @@ public class PersonController {
         return personService.showMyInfo();
     }
 
-    @GetMapping("/myTicket")
+    @GetMapping("/my-ticket")
     public List<TicketDto> showMyTicket() {
         return personService.showMyTicket();
     }
 
-    @PostMapping("/onlineRegistration")
+    @PostMapping("/online-registration")
     public String onlineRegistrationTicket(@RequestBody String time) {
         return personService.onlineRegisterTicket(time);
     }
 
-    @GetMapping("/freeTickets")
+    @GetMapping("/free-tickets")
     public List<TicketDto> freeTickets() {
         return personService.showFreeTicket();
     }
 
-    @GetMapping("/liveQueue")
+    @GetMapping("/live-queue")
     public List<PersonDto> showLiveQueue() {
         return personService.showLiveQueue();
     }
 
-    @GetMapping("/liveQueue/getToLine")
+    @GetMapping("/live-queue/get-to-line")
     public String getToLine() {
         return personService.getToLine();
     }
 
-    @GetMapping("/liveQueue/getOut")
+    @GetMapping("/liveQueue/get-out")
     public String getOutOfQueue(HttpServletRequest request) {
         return personService.getOutOfQueue();
     }

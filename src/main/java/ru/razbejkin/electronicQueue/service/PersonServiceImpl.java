@@ -1,11 +1,6 @@
 package ru.razbejkin.electronicQueue.service;
 
-import com.auth0.jwt.JWT;
-import com.auth0.jwt.JWTVerifier;
-import com.auth0.jwt.algorithms.Algorithm;
-import com.auth0.jwt.interfaces.DecodedJWT;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpHeaders;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -20,9 +15,7 @@ import ru.razbejkin.electronicQueue.dto.PersonDto;
 import ru.razbejkin.electronicQueue.dto.TicketDto;
 import ru.razbejkin.electronicQueue.entity.Person;
 import ru.razbejkin.electronicQueue.entity.Ticket;
-import ru.razbejkin.electronicQueue.model.LiveQueueService;
 import ru.razbejkin.electronicQueue.util.MappingDTO;
-import ru.razbejkin.electronicQueue.model.OnlineTicketService;
 
 import java.util.ArrayList;
 import java.util.Collection;

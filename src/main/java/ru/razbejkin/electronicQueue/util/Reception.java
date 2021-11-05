@@ -1,4 +1,4 @@
-package ru.razbejkin.electronicQueue.model;
+package ru.razbejkin.electronicQueue.util;
 
 import lombok.Data;
 import ru.razbejkin.electronicQueue.dto.PersonDto;

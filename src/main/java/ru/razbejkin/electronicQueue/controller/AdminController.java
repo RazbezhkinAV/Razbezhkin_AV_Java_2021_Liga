@@ -7,6 +7,7 @@ import ru.razbejkin.electronicQueue.dto.PersonDtoFromAdmin;
 import ru.razbejkin.electronicQueue.entity.Person;
 import ru.razbejkin.electronicQueue.entity.Role;
 import ru.razbejkin.electronicQueue.service.AdminService;
+import ru.razbejkin.electronicQueue.util.RoleToUserForm;
 
 import java.util.List;
 
@@ -32,14 +33,9 @@ public class AdminController {
         return adminService.getPersons();
     }
 
-    @PostMapping("/role/addRoleToPerson")
+    @PostMapping("/role/add-role-to-person")
     public void addRoleToPerson(@RequestBody RoleToUserForm role) {
         adminService.addRoleToPerson(role.getPersonName(), role.getRoleName());
     }
 }
 
-@Data
-class RoleToUserForm {
-    private String personName;
-    private String roleName;
-}

@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 import ru.razbejkin.electronicQueue.dto.PersonDto;
 import ru.razbejkin.electronicQueue.dto.TicketDto;
-import ru.razbejkin.electronicQueue.model.Reception;
+import ru.razbejkin.electronicQueue.util.Reception;
 import ru.razbejkin.electronicQueue.service.ManagerService;
 
 import java.util.List;
@@ -21,7 +21,7 @@ public class ManagerController {
         return managerService.showAllTicket();
     }
 
-    @GetMapping("/ticket/nearActive")
+    @GetMapping("/ticket/near-active")
     public TicketDto getNearActiveTicket() {
         return managerService.getNearActiveTicket();
     }
@@ -51,7 +51,7 @@ public class ManagerController {
         return managerService.registrationVisit(phoneNumber);
     }
 
-    @GetMapping("/reception/endMeeting")
+    @GetMapping("/reception/end-meeting")
     public String endMeeting() {
         return managerService.endMeeting();
     }

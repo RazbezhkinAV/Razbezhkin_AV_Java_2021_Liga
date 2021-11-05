@@ -1,8 +1,9 @@
-package ru.razbejkin.electronicQueue.model;
+package ru.razbejkin.electronicQueue.configuration;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
+import ru.razbejkin.electronicQueue.service.OnlineTicketService;
 
 import java.time.LocalTime;
 

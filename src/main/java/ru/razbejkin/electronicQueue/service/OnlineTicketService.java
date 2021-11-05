@@ -1,4 +1,4 @@
-package ru.razbejkin.electronicQueue.model;
+package ru.razbejkin.electronicQueue.service;
 
 
 import org.springframework.stereotype.Service;

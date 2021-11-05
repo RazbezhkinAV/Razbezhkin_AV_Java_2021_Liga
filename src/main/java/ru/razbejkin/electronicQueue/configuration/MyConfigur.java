@@ -7,8 +7,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import ru.razbejkin.electronicQueue.entity.Person;
 import ru.razbejkin.electronicQueue.entity.Role;
-import ru.razbejkin.electronicQueue.model.OnlineTicketService;
-import ru.razbejkin.electronicQueue.model.Reception;
+import ru.razbejkin.electronicQueue.service.OnlineTicketService;
+import ru.razbejkin.electronicQueue.util.Reception;
 import ru.razbejkin.electronicQueue.service.AdminService;
 
 import java.time.LocalTime;

@@ -1,10 +1,11 @@
-package ru.razbejkin.electronicQueue.model;
+package ru.razbejkin.electronicQueue.service;
 
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import ru.razbejkin.electronicQueue.dto.PersonDto;
 import ru.razbejkin.electronicQueue.entity.Ticket;
 import ru.razbejkin.electronicQueue.util.MappingDTO;
+import ru.razbejkin.electronicQueue.util.Reception;
 
 @Service
 @AllArgsConstructor

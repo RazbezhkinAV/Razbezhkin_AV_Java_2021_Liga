@@ -6,6 +6,8 @@ import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -22,6 +24,7 @@ public class Person extends EntityBase {
     private String login;
 
     @Column(name = "password", nullable = false, length = 200)
+    @Size(min = 3)
     private String password;
 
     @Column(name = "name", nullable = false)
@@ -34,6 +37,7 @@ public class Person extends EntityBase {
     private String phoneNumber;
 
     @Column(name = "email")
+    @Email
     private String email;
 
     @OneToOne

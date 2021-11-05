@@ -7,10 +7,7 @@ import ru.razbejkin.electronicQueue.dto.PersonDto;
 import ru.razbejkin.electronicQueue.dto.TicketDto;
 import ru.razbejkin.electronicQueue.entity.Person;
 import ru.razbejkin.electronicQueue.entity.Ticket;
-import ru.razbejkin.electronicQueue.model.LiveQueueService;
-import ru.razbejkin.electronicQueue.model.OnlineTicketService;
-import ru.razbejkin.electronicQueue.model.Reception;
-import ru.razbejkin.electronicQueue.model.ReceptionService;
+import ru.razbejkin.electronicQueue.util.Reception;
 import ru.razbejkin.electronicQueue.util.MappingDTO;
 
 import java.time.LocalTime;
