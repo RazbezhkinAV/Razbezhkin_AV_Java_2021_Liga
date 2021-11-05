@@ -3,9 +3,13 @@ package com.razbejkin.lesson10.dto;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.UUID;
+
 @Data
 @NoArgsConstructor
-public class FriendDTO {
+public class PostDto {
 
-    private String name;
+    private UUID id;
+
+    private String context;
 }

@@ -1,7 +1,5 @@
 package com.razbejkin.lesson10.dto;
 
-import com.razbejkin.lesson10.entity.Person;
-import com.razbejkin.lesson10.entity.Posts;
 import com.razbejkin.lesson10.entity.School;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,7 +9,7 @@ import java.util.UUID;
 
 @Data
 @NoArgsConstructor
-public class PersonDTO {
+public class PersonDto {
 
     private UUID id;
 
@@ -21,8 +19,8 @@ public class PersonDTO {
 
     private School school;
 
-    private List<PostDTO> posts;
+    private List<PostDto> posts;
 
-    private List<FriendDTO> friends;
+    private List<FriendDto> friends;
 
 }

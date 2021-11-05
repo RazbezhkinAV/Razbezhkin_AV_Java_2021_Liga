@@ -1,7 +1,6 @@
 package com.razbejkin.lesson10.controller;
 
-import com.razbejkin.lesson10.dto.PostDTO;
-import com.razbejkin.lesson10.servise.PersonService;
+import com.razbejkin.lesson10.dto.PostDto;
 import com.razbejkin.lesson10.servise.PostService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -20,12 +19,12 @@ public class PostController {
 
     @ApiOperation(value = "find all post")
     @GetMapping
-    public List<PostDTO> findAllPost(){
+    public List<PostDto> findAllPost(){
         return postService.findAllPosts();
     }
 
     @ApiOperation(value = "create new post")
-    @PostMapping("/{id}/newPost")
+    @PostMapping("/{id}/new-post")
     public void createNewPost(@PathVariable("id") String id, @RequestBody String content){
         postService.addNewPost(id,content);
     }

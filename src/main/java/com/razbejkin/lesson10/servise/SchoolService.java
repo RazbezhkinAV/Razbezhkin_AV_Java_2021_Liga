@@ -1,12 +1,10 @@
 package com.razbejkin.lesson10.servise;
 
-import com.razbejkin.lesson10.dao.SchoolDAO;
-import com.razbejkin.lesson10.entity.Person;
+import com.razbejkin.lesson10.repo.SchoolRepo;
 import com.razbejkin.lesson10.entity.School;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
 import java.util.List;
 import java.util.UUID;
 
@@ -14,22 +12,22 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class SchoolService {
 
-    private final SchoolDAO schoolDAO;
+    private final SchoolRepo schoolRepo;
 
     public List<School> getAllSchool(){
-        return schoolDAO.findAll();
+        return schoolRepo.findAll();
     }
     public void saveSchool(School school){
-        schoolDAO.save(school);
+        schoolRepo.save(school);
     }
 
     public School findSchoolById(String id){
-        return schoolDAO.findById(UUID.fromString(id)).get();
+        return schoolRepo.findById(UUID.fromString(id)).get();
     }
 
     public void deleteSchool(String id){
-        School school = schoolDAO.findById(UUID.fromString(id)).get();
-        schoolDAO.delete(school);
+        School school = schoolRepo.findById(UUID.fromString(id)).get();
+        schoolRepo.delete(school);
     }
 
 }

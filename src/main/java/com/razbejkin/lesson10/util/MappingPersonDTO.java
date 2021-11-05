@@ -1,36 +1,30 @@
 package com.razbejkin.lesson10.util;
 
-import com.razbejkin.lesson10.dto.FriendDTO;
-import com.razbejkin.lesson10.dto.PersonDTO;
+import com.razbejkin.lesson10.dto.FriendDto;
+import com.razbejkin.lesson10.dto.PersonDto;
 import com.razbejkin.lesson10.entity.Person;
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Component;
 
 import java.util.stream.Collectors;
 
-@Component
-@RequiredArgsConstructor
 public class MappingPersonDTO {
 
-    private final MappingPostDTO mappingPostDTO;
-
-    public PersonDTO mapToPersonDTO(Person person) {
-        PersonDTO personDTO = new PersonDTO();
+    public static PersonDto mapToPersonDTO(Person person) {
+        PersonDto personDTO = new PersonDto();
         personDTO.setId(person.getId());
         personDTO.setName(person.getName());
         personDTO.setSurname(person.getSurname());
         personDTO.setSchool(person.getSchool());
         personDTO.setPosts(person.getPosts().stream()
-                .map(mappingPostDTO::mapToPostDTO)
+                .map(MappingPostDTO::mapToPostDTO)
                 .collect(Collectors.toList()));
         personDTO.setFriends(person.getFriends().stream()
-                .map(this::mapToFriendList)
+                .map(MappingPersonDTO::mapToFriendList)
                 .collect(Collectors.toList()));
         return personDTO;
     }
 
-    public FriendDTO mapToFriendList(Person person) {
-        FriendDTO friendDTO = new FriendDTO();
+    public static FriendDto mapToFriendList(Person person) {
+        FriendDto friendDTO = new FriendDto();
         friendDTO.setName(person.getSurname() + " " + person.getName());
         return friendDTO;
     }

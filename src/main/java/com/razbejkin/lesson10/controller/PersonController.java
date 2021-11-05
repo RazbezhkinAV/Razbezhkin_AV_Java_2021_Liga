@@ -1,7 +1,7 @@
 package com.razbejkin.lesson10.controller;
 
-import com.razbejkin.lesson10.dto.FriendDTO;
-import com.razbejkin.lesson10.dto.PersonDTO;
+import com.razbejkin.lesson10.dto.FriendDto;
+import com.razbejkin.lesson10.dto.PersonDto;
 import com.razbejkin.lesson10.entity.Person;
 import com.razbejkin.lesson10.servise.PersonService;
 import io.swagger.annotations.Api;
@@ -9,9 +9,7 @@ import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
-import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -27,9 +25,9 @@ public class PersonController {
 
     @ApiOperation(value = "find all person")
     @GetMapping
-    public Page<PersonDTO> findAllPerson(@RequestParam Optional<Integer> page,
-                                      @RequestParam Optional<Integer> size,
-                                      @RequestParam Optional<String> sortBy){
+    public Page<PersonDto> findAllPerson(@RequestParam Optional<Integer> page,
+                                         @RequestParam Optional<Integer> size,
+                                         @RequestParam Optional<String> sortBy){
         return personService.findAllPerson(PageRequest.of(
                 page.orElse(0),
                 size.orElse(5),
@@ -44,7 +42,7 @@ public class PersonController {
 
     @ApiOperation(value = "find person by ID")
     @GetMapping("/{id}")
-    public PersonDTO findPerson(@PathVariable("id") String id){
+    public PersonDto findPerson(@PathVariable("id") String id){
        return personService.findPersonById(id);
     }
 
@@ -68,7 +66,7 @@ public class PersonController {
 
     @ApiOperation(value = "show all friend person")
     @GetMapping("/friends/{id}")
-    public List<FriendDTO> showFriends(@PathVariable("id") String id){
+    public List<FriendDto> showFriends(@PathVariable("id") String id){
         return personService.showFriends(id);
     }
 

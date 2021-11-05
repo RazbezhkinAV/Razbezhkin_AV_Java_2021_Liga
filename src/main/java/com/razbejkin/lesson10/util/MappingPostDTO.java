@@ -1,14 +1,12 @@
 package com.razbejkin.lesson10.util;
 
-import com.razbejkin.lesson10.dto.PostDTO;
+import com.razbejkin.lesson10.dto.PostDto;
 import com.razbejkin.lesson10.entity.Posts;
-import org.springframework.stereotype.Component;
 
-@Component
 public class MappingPostDTO {
 
-    public PostDTO mapToPostDTO(Posts posts){
-        PostDTO postDTO = new PostDTO();
+    public static PostDto mapToPostDTO(Posts posts){
+        PostDto postDTO = new PostDto();
         postDTO.setId(posts.getId());
         postDTO.setContext(posts.getContent());
         return postDTO;
