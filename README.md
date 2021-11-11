@@ -21,17 +21,18 @@
 7. lesson 10 
     CRUD проект.
     Стек технологий:
-      Spring-boot
-      Flyway
-      Swagger
-      Lambook
-      DB = PostgresSQL
+      Spring-boot,
+      Flyway,
+      Swagger,
+      Lambook,
+      DB = PostgresSQL.
 8. exam
     Экзаменационный проект Электронной очереди.
     Стек технологий:
-      Spring-boot
-      Spring security (JWT token)
-      Flyway
-      Swagger
-      Lambook
-      DB = PostgresSQL
+      Spring-boot,
+      Spring security (JWT token),
+      Flyway,
+      Swagger,
+      Lambook,
+      DB = PostgresSQL,
+      Docker.
