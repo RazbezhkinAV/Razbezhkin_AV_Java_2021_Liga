@@ -32,7 +32,6 @@
       Spring-boot,
       Spring security (JWT token),
       Flyway,
-      Swagger,
       Lambook,
       DB = PostgresSQL,
       Docker.
