@@ -22,15 +22,6 @@ public class MappingDTO {
         return personDTO;
     }
 
-    public static PersonDtoFromAdmin mapToPersonDtoFromAdmin(Person person) {
-        PersonDtoFromAdmin dtoFromAdmin = new PersonDtoFromAdmin();
-        dtoFromAdmin.setId(person.getId());
-        dtoFromAdmin.setLogin(person.getLogin());
-        dtoFromAdmin.setPassword(person.getPassword());
-        dtoFromAdmin.setRole(person.getRole());
-        return dtoFromAdmin;
-    }
-
     public static TicketDto mapToTicketDto(Ticket ticket) {
         TicketDto ticketDto = new TicketDto();
         ticketDto.setTime(ticket.getTime());

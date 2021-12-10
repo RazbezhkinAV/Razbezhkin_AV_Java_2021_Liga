@@ -3,7 +3,7 @@ package ru.razbejkin.electronicQueue.configuration;
 import lombok.RequiredArgsConstructor;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
-import ru.razbejkin.electronicQueue.service.OnlineTicketService;
+import ru.razbejkin.electronicQueue.service.TicketService;
 
 import java.time.LocalTime;
 
@@ -12,16 +12,16 @@ import java.time.LocalTime;
 class ScheduledConfiguration {
 
     private final LocalTime currentTime = LocalTime.now();
-    private final OnlineTicketService onlineTicketService;
+    private final TicketService ticketService;
 
-    @Scheduled(cron = "* 0 9-21 * * *")
+    @Scheduled(cron = "* 0 9-18 * * *")
     public void checkActualTicket() {
-        onlineTicketService.chekActualTime(currentTime);
+        ticketService.chekActualTime(currentTime);
     }
 
-    @Scheduled(cron = "* 15 9-21 * * *")
+    @Scheduled(cron = "* 15 9-18 * * *")
     public void lateForVisit() {
-        onlineTicketService.lateForVisit(currentTime);
+        ticketService.lateForVisit(currentTime);
     }
 
 }

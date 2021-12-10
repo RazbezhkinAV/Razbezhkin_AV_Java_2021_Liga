@@ -15,6 +15,8 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import ru.razbejkin.electronicQueue.security.filter.CustomAuthenticationFilter;
 import ru.razbejkin.electronicQueue.security.filter.CustomAuthorizationFilter;
 
+import static org.springframework.http.HttpMethod.*;
+
 @Configuration
 @EnableWebSecurity
 @RequiredArgsConstructor
@@ -34,9 +36,19 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable();
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         http.authorizeRequests().antMatchers("/login/**").permitAll();
-        http.authorizeRequests().antMatchers("/api/admin/**").hasAnyAuthority("ROLE_ADMIN");
-        http.authorizeRequests().antMatchers("/api/manager/**").hasAnyAuthority("ROLE_MANAGER");
+        http.authorizeRequests().antMatchers("/api/person/registration").permitAll();
+        http.authorizeRequests().antMatchers(GET,"/api/ticket/free-tickets").permitAll();
         http.authorizeRequests().antMatchers("/api/person/**").hasAnyAuthority("ROLE_PERSON");
+        http.authorizeRequests().antMatchers(GET,"/api/live-queue/").hasAnyAuthority("ROLE_PERSON","ROLE_MANAGER");
+        http.authorizeRequests().antMatchers(PUT,"/api/live-queue/next-person").hasAnyAuthority("ROLE_MANAGER");
+        http.authorizeRequests().antMatchers(POST,"/api/live-queue/get-to-line").hasAnyAuthority("ROLE_PERSON");
+        http.authorizeRequests().antMatchers(DELETE,"/api/live-queue/get-out").hasAnyAuthority("ROLE_PERSON");
+        http.authorizeRequests().antMatchers(DELETE,"/api/reception/**").hasAnyAuthority("ROLE_MANAGER");
+        http.authorizeRequests().antMatchers(DELETE,"/api/reception/end-meeting").hasAnyAuthority("ROLE_PERSON");
+        http.authorizeRequests().antMatchers(GET,"/api/ticket/all-tickets").hasAnyAuthority("ROLE_MANAGER");
+        http.authorizeRequests().antMatchers(GET,"/api/ticket/near-active-ticket").hasAnyAuthority("ROLE_MANAGER");
+        http.authorizeRequests().antMatchers(DELETE,"/api/ticket").hasAnyAuthority("ROLE_PERSON","ROLE_MANAGER");
+        http.authorizeRequests().antMatchers(PUT,"/api/ticket/confirm/**").hasAnyAuthority("ROLE_PERSON");
         http.authorizeRequests().anyRequest().permitAll();
         http.addFilter(new CustomAuthenticationFilter(authenticationManagerBean()));
         http.addFilterBefore(new CustomAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class);

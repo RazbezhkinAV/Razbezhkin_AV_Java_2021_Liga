@@ -1,6 +1,6 @@
-package ru.razbejkin.electronicQueue.service;
+package ru.razbejkin.electronicQueue.model;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import ru.razbejkin.electronicQueue.dto.PersonDto;
 import ru.razbejkin.electronicQueue.entity.Person;
 import ru.razbejkin.electronicQueue.util.MappingDTO;
@@ -8,10 +8,10 @@ import ru.razbejkin.electronicQueue.util.MappingDTO;
 import java.util.LinkedList;
 import java.util.List;
 
-@Service
-public class LiveQueueService {
+@Component
+public class LiveQueue {
 
-    public LiveQueueService() {
+    public LiveQueue() {
         personList = new LinkedList<>();
     }
 
