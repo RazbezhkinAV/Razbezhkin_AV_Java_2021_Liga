@@ -122,8 +122,4 @@ public class TicketServiceImpl implements TicketService {
         }
     }
 
-    @Override
-    public void save(Ticket ticket) {
-        ticketRepo.save(ticket);
-    }
 }
