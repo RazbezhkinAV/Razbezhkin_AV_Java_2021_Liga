@@ -1,4 +1,4 @@
-package ru.razbejkin.electronicQueue.controller.version2;
+package ru.razbejkin.electronicQueue.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

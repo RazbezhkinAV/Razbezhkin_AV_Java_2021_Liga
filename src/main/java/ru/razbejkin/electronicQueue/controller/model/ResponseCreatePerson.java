@@ -1,4 +1,4 @@
-package ru.razbejkin.electronicQueue.controller.version2.model;
+package ru.razbejkin.electronicQueue.controller.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

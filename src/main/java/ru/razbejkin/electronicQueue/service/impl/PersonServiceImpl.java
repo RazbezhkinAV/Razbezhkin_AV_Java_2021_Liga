@@ -20,13 +20,12 @@ import ru.razbejkin.electronicQueue.repository.PersonRepo;
 import ru.razbejkin.electronicQueue.repository.RoleRepo;
 import ru.razbejkin.electronicQueue.service.PersonService;
 import ru.razbejkin.electronicQueue.service.TicketService;
-import ru.razbejkin.electronicQueue.controller.version2.model.RequestCreateNewPerson;
+import ru.razbejkin.electronicQueue.controller.model.RequestCreateNewPerson;
 import ru.razbejkin.electronicQueue.util.MappingDTO;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service

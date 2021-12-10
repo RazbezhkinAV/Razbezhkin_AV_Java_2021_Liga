@@ -1,16 +1,16 @@
-package ru.razbejkin.electronicQueue.controller.version2;
+package ru.razbejkin.electronicQueue.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-import ru.razbejkin.electronicQueue.controller.version2.model.ResponseCreatePerson;
+import ru.razbejkin.electronicQueue.controller.model.RequestCreateNewPerson;
+import ru.razbejkin.electronicQueue.controller.model.ResponseCreatePerson;
 import ru.razbejkin.electronicQueue.dto.PersonDto;
 import ru.razbejkin.electronicQueue.dto.TicketDto;
 import ru.razbejkin.electronicQueue.entity.Ticket;
 import ru.razbejkin.electronicQueue.exception.TicketBusyException;
 import ru.razbejkin.electronicQueue.service.PersonService;
-import ru.razbejkin.electronicQueue.controller.version2.model.RequestCreateNewPerson;
 
 import java.net.URI;
 import java.util.List;
