@@ -20,26 +20,17 @@ values ('7979ba54-f2b4-4ffd-9495-c6365ddd7df7', 'ROLE_MANAGER'),
 create table person
 (
     id           uuid primary key,
-    login        varchar unique,
-    password     varchar not null,
+    login        varchar ,
+    password     varchar ,
     name         varchar,
     surname      varchar,
-    phone_number varchar unique,
+    phone_number varchar ,
     email        varchar,
     ticket_id    uuid,
     role_id      uuid,
     foreign key (ticket_id) references ticket (id),
     foreign key (role_id) references role (id)
 );
-
-create table ticket_person
-(
-    ticket_id uuid,
-    person_id uuid,
-    foreign key (ticket_id) references ticket (id),
-    foreign key (person_id) references person (id),
-    primary key (ticket_id,person_id)
-)
 
 
 
