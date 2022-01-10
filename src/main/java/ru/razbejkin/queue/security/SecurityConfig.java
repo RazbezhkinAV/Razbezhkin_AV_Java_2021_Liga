@@ -42,8 +42,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests().antMatchers("/api/persons/**").hasAnyAuthority("ROLE_PERSON");
         http.authorizeRequests().antMatchers(DELETE,"/api/reception/**").hasAnyAuthority("ROLE_MANAGER");
         http.authorizeRequests().antMatchers(DELETE,"/api/reception/end-meeting").hasAnyAuthority("ROLE_PERSON");
-        http.authorizeRequests().antMatchers(GET,"/api/tickets/all").permitAll();        http.authorizeRequests().antMatchers(GET,"/api/tickets/all").permitAll();
-        http.authorizeRequests().antMatchers(GET,"/api/tickets/**").permitAll();
+        http.authorizeRequests().antMatchers(GET,"/api/tickets/all").hasAnyAuthority("ROLE_MANAGER");
         http.authorizeRequests().antMatchers(GET,"/api/tickets/near-active").hasAnyAuthority("ROLE_MANAGER");
         http.authorizeRequests().antMatchers(DELETE,"/api/tickets").hasAnyAuthority("ROLE_PERSON","ROLE_MANAGER");
         http.authorizeRequests().antMatchers(PUT,"/api/tickets/confirm/**").hasAnyAuthority("ROLE_PERSON");
